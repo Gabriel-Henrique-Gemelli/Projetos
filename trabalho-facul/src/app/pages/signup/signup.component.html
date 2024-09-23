@@ -1,0 +1,22 @@
+<body>
+    <div class="page">
+        <form method="POST" class="formLogin">
+            <h1>Cadastro</h1>
+            <p>digite seus dados para criar uma conta</p>
+            <label>Nome</label>
+            <input  name="nome" [(ngModel)]="usuario.nome" type="name" placeholder="digite seu nome completo">
+            <label>E-mail</label>
+            <input name="email"[(ngModel)]="usuario.email" id="email" type="email" placeholder="digite o seu email" autofocus="true" >
+            <label>Senha</label>
+            <input name="senha"[(ngModel)]="usuario.senha" id="senha" type="password" placeholder="digite sua senha " >
+            <label>Confirme A Senha</label>
+            <input name="confirmarsenha"[(ngModel)]="usuario.confirmarsenha" type="password" placeholder="confirme a senha " >
+            <a routerLink="/login">ja possui uma conta? faça login</a>
+            <input type="submit" value="Cadastrar" class="btn"  routerLink="/login" (click)="criarUsuario()">
+
+        </form>
+    </div>
+</body>
+
+
+

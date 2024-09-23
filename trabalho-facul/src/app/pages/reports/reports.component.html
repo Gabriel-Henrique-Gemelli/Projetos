@@ -1,0 +1,19 @@
+<body>
+    <ul>
+        <li><a routerLink="/home" routerLinkActive="selected">Home</a></li>
+        <li><a routerLink="/master" routerLinkActive="selected">Master</a></li>
+        <li><a routerLink="/reports" routerLinkActive="selected">Reports</a></li>
+        <li><a routerLink="/signup" routerLinkActive="selected">Signup</a></li>
+        <li><a routerLink="/login" routerLinkActive="selected">login</a></li>
+    </ul>
+</body>
+
+
+<form>
+    <div [formGroup]="formulario">
+        <p>Aqui você pode reportar erros em nosso site</p>
+        <input type="name" placeholder="Digite Sua Reclamação Aqui" autofocus="true" >
+        <br>
+        <input class="btn" type="submit" value="Enviar" (click)="exibirMensagem()">
+    </div>
+</form>
