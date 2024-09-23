@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "fb9302dc-6bb7-408d-8da9-3eabd6eb4db8",
+        "nome": "gemas",
+        "data_compra": "01/07/2024",
+        "preco_compra": 250.0,
+        "preco_venda": 375.0,
+        "quantidade_vendida": 0
+    },
+    {
+        "uuid": "c061534c-eb5f-4d68-8636-776a2c290c20",
+        "nome": "hello",
+        "data_compra": "02/07/2024",
+        "preco_compra": 250.0,
+        "preco_venda": 375.0,
+        "quantidade_vendida": 0
+    },
+    {
+        "uuid": "8f2204d2-21b0-424d-94a5-5610d9340eb1",
+        "nome": "sad",
+        "data_compra": "25/08/2024",
+        "preco_compra": 2562100.0,
+        "preco_venda": 3843150.0,
+        "quantidade_vendida": 0
+    }
+]
