@@ -7,6 +7,7 @@ public class Main {
 		System.out.println(Soma(20,20));
 		System.out.printf("%.2f%n",Divisao(14, 7.8));
 		//Essa anotaçao diz o limite do numero de casas decimais
+		// %.2f%n
 		System.out.println(Multiplicacao(50, 50));
 
 	}
