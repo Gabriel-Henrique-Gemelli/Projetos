@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="quadrado">
+        <mat-card style="color: white;">
+            <main>
+                <article>
+                    <mat-card-title>
+                        <h2>Sobre ela</h2>
+                    </mat-card-title>
+                    <mat-card-content>
+                        <p> Esse é um memorial para conhecer a vida da Ana Bresolin. que na minha opinião (Seu namorado) é a mulher mais bonita
+                            e
+                            maravilhosa desse mundo, a dona do meu coraçao,
+                            e é em homenagem a essa mesma mulher que eu estou fazendo esse site,
+                            clique nos tres pontos abaixo para saber mais sobre a vida da minha amada e seus feitos quando viva.
+                        </p>
+                        <hr>
+                    </mat-card-content>
+                </article>
+            </main>
+
+            <button mat-button [matMenuTriggerFor]="menu"> <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="musicas">Musica</button>
+                <button mat-menu-item routerLink="fotos">Foto</button>
+                <button mat-menu-item routerLink="coisasQueGosta">Hobbies</button>
+                <button mat-menu-item routerLink="seuAmor">Seu amor</button>
+                <button mat-menu-item routerLink="series e filmes">Series e filmes</button>
+                <button mat-menu-item routerLink="herAdvices">Her Advices</button>
+            </mat-menu>
+            <router-outlet></router-outlet>
+        </mat-card>
+    </div>
+</div>

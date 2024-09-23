@@ -1,0 +1,30 @@
+<h2>Nada melhor do que imagens para ilustrar como foi sua vida</h2>
+<ul>
+    <li>
+        <h3>Me,Myself And I</h3>
+    </li>
+</ul>
+<mat-grid-list cols="3" gutterSize="20px">
+    <mat-grid-tile *ngFor="let anaimage of anaimages">
+    <img [src]="anaimage" alt="imagens" width="90%">
+</mat-grid-tile>
+</mat-grid-list>
+<h2>The two of us</h2>
+<mat-grid-list cols="3" gutterSize="20px">
+    <mat-grid-tile *ngFor="let weimages of weimages">
+    <img [src]="weimages" alt="imagens" width="90%">
+</mat-grid-tile>
+</mat-grid-list>
+<h2>Familia tradicional brasileira</h2>
+<mat-grid-list cols="3" gutterSize="20px">
+    <mat-grid-tile *ngFor="let familyimages of familyimage">
+    <img [src]="familyimages" alt="imagens" width="90%">
+</mat-grid-tile>
+</mat-grid-list>
+<h2>The one Ana had friends</h2>
+<mat-grid-list cols="3"  gutterSize="20px">
+    <mat-grid-tile *ngFor="let friendsimages of friendsimage">
+    <img [src]="friendsimages" alt="imagens" width="90%">
+</mat-grid-tile>
+</mat-grid-list>
+  

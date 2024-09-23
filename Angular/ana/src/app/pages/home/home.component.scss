@@ -1,0 +1,22 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .quadrado {
+    width: 300px;
+    height: 300px;
+    align-items: center;
+  }
+  .quadrado p {
+    font-size: 24px;
+    color: white;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91.1%; /* Ajuste a altura conforme necessário */
+    background-color: rgb(30, 30, 30);
+  }
+  button{
+    font-size: 24px
+  }

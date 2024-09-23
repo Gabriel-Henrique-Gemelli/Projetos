@@ -1,0 +1,1 @@
+esse e o meu projeto em que estou trabalahando serndo full stack, com angular no front-end e spring no back-end 

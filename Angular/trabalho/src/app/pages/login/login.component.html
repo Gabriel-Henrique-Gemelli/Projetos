@@ -1,0 +1,24 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+
+
+
+
+<body>
+    <div class="page" [formGroup]="formulario">
+        <form method="POST" class="ngForm" #f [formGroup]="formulario">
+            <h1>Login</h1>
+            <p>digite os seus dados de acesso no campo abaixo </p>
+            <label>E-mail</label>
+            <input formControlName="email" name="email" [(ngModel)]="usuario.email" type="email"
+                placeholder="digite o seu email" autofocus="true" id="Email" autocomplete="on">
+            <label>senha</label>
+            <input formControlName="senha" name="senha" [(ngModel)]="usuario.senha" type="password"
+                placeholder="digite sua senha " id="senha" autocomplete="true">
+            <a routerLink="/esqueceu-senha">esqueci minha senha </a>
+            <a routerLink="/signup">Nao possui conta? cadastre-se aqui</a>
+            <input type="submit" value="acessar" class="btn" (click)="fazerLogin()">
+        </form>
+
+    </div>
+</body>
+
