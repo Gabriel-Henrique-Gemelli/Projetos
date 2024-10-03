@@ -15,8 +15,8 @@ public class Banco {
 		System.out.print("Digite o nome da conta:");
 		String name = sc.nextLine();
 		System.out.print("Tem algum deposito inicial (Y/N)?");
-		String initial = sc.nextLine();
-		if (initial.equals("y")) {
+		char initial = sc.next().charAt(0);
+		if (initial == 'y') {
 			System.out.println("Deposite um valor inicial: ");
 			double deposito = sc.nextDouble();
 			

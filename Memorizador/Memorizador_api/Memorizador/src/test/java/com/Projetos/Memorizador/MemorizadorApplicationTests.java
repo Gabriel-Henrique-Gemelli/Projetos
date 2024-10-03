@@ -1,10 +1,10 @@
-package com.GabrielGemelli.Memorizador_api;
+package com.Projetos.Memorizador;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MemorizadorApiApplicationTests {
+class MemorizadorApplicationTests {
 
 	@Test
 	void contextLoads() {
