@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,32 +13,43 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_anime")
-public class Animes implements Serializable {
-
+@Table(name = "tb_livro")
+public class Livro implements Serializable {
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-	private Integer episodios;
+	private Integer paginas;
 	private Integer nota;
 	private String img;
-
-	@ManyToMany(mappedBy = "anime",cascade = CascadeType.ALL)
+	@ManyToMany(mappedBy = "livro")
 	private List<User> usuarios = new ArrayList<>();
-
-	public Animes() {
-
+	
+	public Livro() {
+		
 	}
 
-	public Animes(String nome, Integer episodios, Integer nota, String img, List<User> usuarios) {
+
+	public Livro(String nome, Integer paginas, Integer nota, String img, List<User> usuarios) {
 		super();
 		this.nome = nome;
-		this.episodios = episodios;
+		this.paginas = paginas;
 		this.nota = nota;
 		this.img = img;
 		this.usuarios = usuarios;
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -50,12 +60,12 @@ public class Animes implements Serializable {
 		this.nome = nome;
 	}
 
-	public Integer getEpisodios() {
-		return episodios;
+	public Integer getPaginas() {
+		return paginas;
 	}
 
-	public void setEpisodios(Integer episodios) {
-		this.episodios = episodios;
+	public void setPaginas(Integer paginas) {
+		this.paginas = paginas;
 	}
 
 	public Integer getNota() {
@@ -74,21 +84,17 @@ public class Animes implements Serializable {
 		this.img = img;
 	}
 
+	
+
 	public List<User> getUsuarios() {
 		return usuarios;
 	}
+
 
 	public void setUsuarios(List<User> usuarios) {
 		this.usuarios = usuarios;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getId() {
-		return id;
-	}
 
 	@Override
 	public int hashCode() {
@@ -103,8 +109,12 @@ public class Animes implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Animes other = (Animes) obj;
+		Livro other = (Livro) obj;
 		return Objects.equals(id, other.id);
 	}
+	
+	
+	
+	
 
 }

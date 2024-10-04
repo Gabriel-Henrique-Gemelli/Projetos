@@ -1,11 +1,10 @@
 package com.Projetos.Memorizador.Entitis;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,9 +13,11 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_anime")
-public class Animes implements Serializable {
-
+@Table(name = "tb_serie")
+public class Serie implements Serializable {
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,20 +27,29 @@ public class Animes implements Serializable {
 	private Integer nota;
 	private String img;
 
-	@ManyToMany(mappedBy = "anime",cascade = CascadeType.ALL)
-	private List<User> usuarios = new ArrayList<>();
-
-	public Animes() {
-
+	@ManyToMany(mappedBy = "serie")
+	private Set<User> usuarios = new HashSet<>();
+	
+	public Serie() {
+		
 	}
 
-	public Animes(String nome, Integer episodios, Integer nota, String img, List<User> usuarios) {
+	public Serie(Long id, String nome, Integer episodios, Integer nota, String img, Set<User> usuarios) {
 		super();
+		this.id = id;
 		this.nome = nome;
 		this.episodios = episodios;
 		this.nota = nota;
 		this.img = img;
 		this.usuarios = usuarios;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -74,20 +84,12 @@ public class Animes implements Serializable {
 		this.img = img;
 	}
 
-	public List<User> getUsuarios() {
+	public Set<User> getUsuarios() {
 		return usuarios;
 	}
 
-	public void setUsuarios(List<User> usuarios) {
+	public void setUsuarios(Set<User> usuarios) {
 		this.usuarios = usuarios;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getId() {
-		return id;
 	}
 
 	@Override
@@ -103,8 +105,9 @@ public class Animes implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Animes other = (Animes) obj;
+		Serie other = (Serie) obj;
 		return Objects.equals(id, other.id);
 	}
-
+	
+	
 }

@@ -1,14 +1,16 @@
 package com.Projetos.Memorizador.Entitis;
 
 import java.io.Serializable;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
@@ -23,17 +25,42 @@ public class User implements Serializable {
 	private String name;
 	private String password;
 
-	@ManyToMany(mappedBy = "animes")
-	private Set<Animes> anime = new HashSet<>();
+	@ManyToMany
+	@JoinTable(name = "usuario_anime", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "anime_id"))
+	private List<Animes> anime = new ArrayList<>();
+
+	@ManyToMany
+	@JoinTable(name = "usuario_livro", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "livro_id"))
+	private List<Livro> livro = new ArrayList<>();
+
+	@ManyToMany
+	@JoinTable(name = "usuario_serie", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "serie_id"))
+	private List<Serie> serie = new ArrayList<>();
+
+	@ManyToMany
+	@JoinTable(name = "usuario_jogo", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "jogo_id"))
+	private List<jogo> jogo = new ArrayList<>();
 
 	public User() {
 
 	}
+	
 
 	public User(String name, String password) {
 		super();
 		this.name = name;
 		this.password = password;
+	}
+
+
+	public User(String name, String password, List<Animes> anime, List<Livro> livro, List<Serie> serie,
+			List<jogo> jogo) {
+		this.name = name;
+		this.password = password;
+		this.anime = anime;
+		this.livro = livro;
+		this.serie = serie;
+		this.jogo = jogo;
 	}
 
 	public String getName() {
@@ -52,8 +79,24 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public Set<Animes> getAnime() {
+	public long getId() {
+		return id;
+	}
+
+	public List<Animes> getAnime() {
 		return anime;
+	}
+
+	public List<Livro> getLivro() {
+		return livro;
+	}
+
+	public List<Serie> getSerie() {
+		return serie;
+	}
+
+	public List<jogo> getJogo() {
+		return jogo;
 	}
 
 	@Override
