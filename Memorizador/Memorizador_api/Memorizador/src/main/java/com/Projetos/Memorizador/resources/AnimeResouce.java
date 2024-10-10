@@ -15,15 +15,16 @@ import com.Projetos.Memorizador.services.AnimeService;
 @RestController
 @RequestMapping(value = "/anime")
 public class AnimeResouce {
-	
+
 	@Autowired
 	private AnimeService service;
-	
+
 	@GetMapping
 	public ResponseEntity<List<Animes>> findAll() {
 		List<Animes> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
+
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Animes> findById(@PathVariable Long id) {
 		Animes obj = service.findById(id);

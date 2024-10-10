@@ -1,16 +1,12 @@
 package com.Projetos.Memorizador.Entitis;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -26,20 +22,17 @@ public class Animes implements Serializable {
 	private Integer nota;
 	private String img;
 
-	@ManyToMany(mappedBy = "anime",cascade = CascadeType.ALL)
-	private List<User> usuarios = new ArrayList<>();
-
 	public Animes() {
 
 	}
 
-	public Animes(String nome, Integer episodios, Integer nota, String img, List<User> usuarios) {
+	public Animes(String nome, Integer episodios, Integer nota, String img) {
 		super();
 		this.nome = nome;
 		this.episodios = episodios;
 		this.nota = nota;
 		this.img = img;
-		this.usuarios = usuarios;
+
 	}
 
 	public String getNome() {
@@ -72,14 +65,6 @@ public class Animes implements Serializable {
 
 	public void setImg(String img) {
 		this.img = img;
-	}
-
-	public List<User> getUsuarios() {
-		return usuarios;
-	}
-
-	public void setUsuarios(List<User> usuarios) {
-		this.usuarios = usuarios;
 	}
 
 	public void setId(Long id) {

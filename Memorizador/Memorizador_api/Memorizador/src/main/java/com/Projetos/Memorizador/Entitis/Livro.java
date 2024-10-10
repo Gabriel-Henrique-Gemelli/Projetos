@@ -34,13 +34,11 @@ public class Livro implements Serializable {
 	}
 
 
-	public Livro(String nome, Integer paginas, Integer nota, String img, List<User> usuarios) {
-		super();
+	public Livro(String nome, Integer paginas, Integer nota, String img) {
 		this.nome = nome;
 		this.paginas = paginas;
 		this.nota = nota;
 		this.img = img;
-		this.usuarios = usuarios;
 	}
 
 

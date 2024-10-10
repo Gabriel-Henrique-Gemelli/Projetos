@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,18 +27,22 @@ public class User implements Serializable {
 	private String name;
 	private String password;
 
+	
 	@ManyToMany
 	@JoinTable(name = "usuario_anime", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "anime_id"))
 	private List<Animes> anime = new ArrayList<>();
 
+	
 	@ManyToMany
 	@JoinTable(name = "usuario_livro", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "livro_id"))
 	private List<Livro> livro = new ArrayList<>();
 
+	
 	@ManyToMany
 	@JoinTable(name = "usuario_serie", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "serie_id"))
 	private List<Serie> serie = new ArrayList<>();
 
+	
 	@ManyToMany
 	@JoinTable(name = "usuario_jogo", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "jogo_id"))
 	private List<jogo> jogo = new ArrayList<>();

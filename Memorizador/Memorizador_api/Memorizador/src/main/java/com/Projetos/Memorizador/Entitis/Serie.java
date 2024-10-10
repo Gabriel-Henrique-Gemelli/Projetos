@@ -34,14 +34,13 @@ public class Serie implements Serializable {
 		
 	}
 
-	public Serie(Long id, String nome, Integer episodios, Integer nota, String img, Set<User> usuarios) {
+	public Serie(Long id, String nome, Integer episodios, Integer nota, String img) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.episodios = episodios;
 		this.nota = nota;
 		this.img = img;
-		this.usuarios = usuarios;
 	}
 
 	public Long getId() {
