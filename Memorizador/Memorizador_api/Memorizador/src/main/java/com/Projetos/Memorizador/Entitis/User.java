@@ -61,6 +61,26 @@ public class User implements Serializable {
 		this.jogo = jogo;
 	}
 
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setAnime(List<Animes> anime) {
+		this.anime = anime;
+	}
+
+	public void setLivro(List<Livro> livro) {
+		this.livro = livro;
+	}
+
+	public void setSerie(List<Serie> serie) {
+		this.serie = serie;
+	}
+
+	public void setJogo(List<jogo> jogo) {
+		this.jogo = jogo;
+	}
+
 	public String getName() {
 		return name;
 	}
