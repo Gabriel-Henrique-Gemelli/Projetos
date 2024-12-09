@@ -1,0 +1,38 @@
+Capitulo 3:
+
+a pilha de chamada e um pilha que existe dentro das linguagens que e assim:
+existe a chamada principal e chamadas secundarias que vao sendo colocadas em primeiro llugar e saindo como primeiro lugar ate nao restar mais nada
+
+resumo do capitulo 3:
+* recursao e quando uma funçao chama a si mesmo 
+* toda a funçao recursiva tem dois casos: o caso base e o caso recursivo
+* uma pilha tem duas operaçoes: push e pop
+* todas as chamadas de funçao vao para a pilha de chamada 
+* a pilha de chamada pode ficar muito grande e ocupar muita memoria
+
+capitulo 4:
+
+para fazer um DC (Divisao e conquista) e recomendavel que se siga dois passos
+1. achar o caso base, ou seja e o caso mais simples para o problema.
+2. Descubra como reduzir o problema ate que ele se torne um caso base.
+Existem linguagens de programaçao que nao possuem funçoes de loop, logo a unica maneira sao usando funçoes recursivas
+
+o quick sort e um algoritmo de ordenaçao, e muito mais rapido que a ordenaçao por seleçao
+
+como fazer um particionamento:
+1 escolha um pivo
+2 separe os menores e maiores valores para o mesmo
+
+dessa maneira voce tem:
+* um subarray contendo todos os numeros menores que o pivo
+* o pivo 
+* um subarray contendo todos os numeros maiores que o pivo 
+
+compreensao de lista, por exemplo 
+menor = [i for i in lista[1:] if i <= pivo]
+
+equivale a 
+menor = []
+for i in lista[1:]:
+    if i <= pivo:
+        menor.append(i)
