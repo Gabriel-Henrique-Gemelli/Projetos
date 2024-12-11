@@ -48,3 +48,29 @@ nume funçao hash voce insere uma string e a funçao deve retornar um numero.
 Existem alguns requisitos para uma funçao hash.
 * Ela deve ser consistente, se ao inserir a palavra maça e a funçao retornar 4, ela deve sempre retornar 4, caso o contrario ela tem alguma coisa de errado.
 * A funçao deve mapear diferentes palavras para diferentes numeros 
+- dicionalrios em python tambem pode ser chamados de tabelas hash
+para crialos em python precisa apenas da funçao dict()
+o processo de tranformar um nome de um site em um numero de ip se chama "Resoluçao DNS" e sao utilizadas tabelas hash
+tabela hash pode ser usada como cache
+As tableas hash sao uteis para:
+* Modelar relaçoes de dois itens
+* filtrar por duplicata
+* caching/memorizaçao de dados, em vez de solicitar estes dados do servidor
+Colisao:
+* em hash isso quer dizer que dois nomes foram indicados no mesmo espaço de memoria 
+para resolver isso:
+se diversas chaves mapeam para o mesmo lugar crie uma lista encadeada neste espaço
+redimencionamento:
+* e quando a quantidade de itens na tabela hash e maior do que o tamanho da lista, logo o tamanho da lista tem que aumentar
+fator de carga:
+ele mede a quantidade de espaços na sua tabela hash que con tinua vazio
+um fator de carga maior que um indica que e impossivel voce ter um espaço para cada item 
+Um regra geral para saber se um array deve ter seu tamanho aumentado e se o fator de carga for maior do que 0,7
+Resumo do capiutlo:
+* voce pode fazer uma tabela hash quando se junta uma funça hash com  um array 
+* colisoes sao um problema, E necessario haver uma funçao hash que minimize colisoes 
+* as tabelas hash sao extremamentes rapidas para pesquisarr inserir e remover itens 
+* Tabelas hash sao boas para modelar relaçoes entre dois itens 
+* se o seu fator de carga for maior do que 0,7 e Aconselhavel fazer um redimensionamento em seu array
+* As tabelas hash sao utilizadas como cache de dados(como em u servidor web por exemplo)
+* Tabelas hash sao otimas para localizar duplicatas
