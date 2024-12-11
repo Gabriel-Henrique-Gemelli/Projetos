@@ -36,3 +36,15 @@ menor = []
 for i in lista[1:]:
     if i <= pivo:
         menor.append(i)
+
+Resumo capitulo 4:
+* a estrategia funciona por meio de Divisao do problema em problemas menores, se voce estiver utilizando Dc em uma lista o caso base provavelmente sera um array vazio ou um array com apenas um elemento
+* se voce estiver implementando um quick sort, escolha um elemento aleatorio como pivo, o tempo de execuçao medio do quicksort e O(n log n)
+* a constante na notaçao big o pode ser relevante em alguns casos esta e a razao pela qual quicksort e mais rapido que o merge sort 
+* a constante dificilmente sera relevante na comparaçao entre pesquisa simples e pesquisa binaria pois O(log n) e muito mais rapido do que O(n) quando sua lista e grande
+capitulo 5:
+Funçoes hash: 
+nume funçao hash voce insere uma string e a funçao deve retornar um numero.
+Existem alguns requisitos para uma funçao hash.
+* Ela deve ser consistente, se ao inserir a palavra maça e a funçao retornar 4, ela deve sempre retornar 4, caso o contrario ela tem alguma coisa de errado.
+* A funçao deve mapear diferentes palavras para diferentes numeros 
