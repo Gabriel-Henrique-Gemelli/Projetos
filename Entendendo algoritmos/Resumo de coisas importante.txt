@@ -74,3 +74,18 @@ Resumo do capiutlo:
 * se o seu fator de carga for maior do que 0,7 e Aconselhavel fazer um redimensionamento em seu array
 * As tabelas hash sao utilizadas como cache de dados(como em u servidor web por exemplo)
 * Tabelas hash sao otimas para localizar duplicatas
+capitulo 6:
+introdução a grafos:
+Ele e bastante utilizado em "problemas de caminho minimo"
+Uma maneira de resolver esse tipo de problema e:
+* Modele o problema utilizando grafos.
+* resolva o problema utilizando a pesquisa em largura.
+Um modelo de grafo no geral e um conjunto de conexoes.
+Cada grafo e constituido em vertices e arrestas aonde:
+vertice: e o ponto inicial
+Aresta: e a conexao entre os dois
+sao uma maneira de modelar como eventos diferentes estao conectados entre si
+pesquisa em largura:
+ela ajuda a responder duas questoes
+* existe algum caminho dom vertice A ate o vertice B
+Qual o caminho minimo de vertices A ate o vertice B
