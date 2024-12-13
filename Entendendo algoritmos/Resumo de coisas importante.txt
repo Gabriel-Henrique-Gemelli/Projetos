@@ -103,5 +103,13 @@ resumo capitulo 6:
 * Filas sao FIFO(first in first out)
 * Pilhas sao LIFO(Last in First out)
 * Voce precisa verificar as pessoas na ordem em que elas foram adicionadas a lista de pesquisa, portanto a lista de pesquisa deve ser uma fila,caso contrario voce nao obtera o caminho minimo.
-* Cada vez que voce precisar verificar alguem, procure nao verificalo novamente. caso contrario, podera acabar em um loop infinito.]
+* Cada vez que voce precisar verificar alguem, procure nao verificalo novamente. caso contrario, podera acabar em um loop infinito.
 começando o capitulo 7:
+* o algoritmo de dijkstra e utilizando para calcular grafos ponderados, ou seja grafos que poussuem outro tipo de informaçao, exemplo tempo
+* o algoritmo de dujkstra tem 4 etapas:
+1 encontre o vertice mais "barato", este e o vertice em que voce consegue chegar no menor tempo possivel
+2 Atualize o custo dos vizinho desse vertice
+3 repita ate que voce tenha feito isso em casa vertice do grafo
+4 calcule o caminho final
+Grafo ponderado sao aqueles em que as arrestas tem pesos, ja os grafos nao ponderados, nao tem pesos
+o algoritmo de dijkastra so funciona com grafos sem ciclos ou em graficos com um ciclo de peso positivo
