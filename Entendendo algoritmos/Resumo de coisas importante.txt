@@ -89,3 +89,19 @@ pesquisa em largura:
 ela ajuda a responder duas questoes
 * existe algum caminho dom vertice A ate o vertice B
 Qual o caminho minimo de vertices A ate o vertice B
+o algoritmo de grafos so funciona devido ao uso de filas, que o primeiro a entrar e o primeiro a ser analisado.
+As filas sao uma estruturas de dados FIFO first in first out.
+Ja as filas seguem um padrao LIFO(Last in first out)
+Eles tem setas apontadas para eles mas nenhuma seta saindo deles para outros esse processo se chama de digrafo,onde a relação acontece de apenas um sentido
+Arvore e um tipo especial de grafo em que nenhuma aresta jamais aponta de volta 
+resumo capitulo 6:
+* A pesquisa em largura lhe diz se ha um caminho de A para base;
+* Se esse caminho minimo existir, a pesquisa em largura lhe dara o caminho minimo;
+* se voce tem um problema do tipo "Encontre o menor X", tente modelar o seu problema utilizando grafos e use a pesquisa em largura para resolver;
+* um digrafo contem setas e as relaçoes seguem a direçao das setas (Rama -> Adit significa que rama deve dinheiro a adita mas adit nao deve dinheiro a rama)
+* Grafos nao direcionados nao contem setas, e a relaçao acontece nos dois sentidos(Ross - rachel significa que Ross namorou rachel, e rachel namorou ross)
+* Filas sao FIFO(first in first out)
+* Pilhas sao LIFO(Last in First out)
+* Voce precisa verificar as pessoas na ordem em que elas foram adicionadas a lista de pesquisa, portanto a lista de pesquisa deve ser uma fila,caso contrario voce nao obtera o caminho minimo.
+* Cada vez que voce precisar verificar alguem, procure nao verificalo novamente. caso contrario, podera acabar em um loop infinito.]
+começando o capitulo 7:
