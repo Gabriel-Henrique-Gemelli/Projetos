@@ -113,3 +113,5 @@ começando o capitulo 7:
 4 calcule o caminho final
 Grafo ponderado sao aqueles em que as arrestas tem pesos, ja os grafos nao ponderados, nao tem pesos
 o algoritmo de dijkastra so funciona com grafos sem ciclos ou em graficos com um ciclo de peso positivo
+* o algoritmo de dijkastra nao funciona com valores negativos, ou seja Se for comparado preçoes entre dois itens e um devolver dinheiro o algoritmo quebra.
+* para isso existe um algoritmo chamado "algoritmo de bellman-ford"
