@@ -1,6 +1,6 @@
 import pyautogui
 import keyboard
-
+ 
 print("Segurando a tecla 'F'. Pressione a barra de espaço para parar.")
 
 try:
