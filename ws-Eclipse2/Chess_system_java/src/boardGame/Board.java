@@ -1,39 +1,61 @@
 package boardGame;
 
 public class Board {
-	private int linha;
-	private int coluna;
+	private int linhas;
+	private int colunas;
 	private piece [][] peças;
 	
 	public Board(int linha, int coluna) {
-		this.linha = linha;
-		this.coluna = coluna;
+		if(linha < 1 || coluna < 1) {
+			throw new boardException("Erro criando tabuleiro e necessario que esteja pelo menos 1 linha e 1 coluna");
+		}
+		this.linhas = linha;
+		this.colunas = coluna;
 		peças = new piece[linha] [coluna];
 	}
 	public int getLinha() {
-		return linha;
-	}
-	public void setLinha(int linha) {
-		this.linha = linha;
+		return linhas;
 	}
 	public int getColuna() {
-		return coluna;
-	}
-	public void setColuna(int coluna) {
-		this.coluna = coluna;
+		return colunas;
 	}
 	
 	public piece piece(int linha, int coluna) {
+		if (!positionExists(linha,coluna)) {
+			throw new boardException("Posiçao nao e valida");
+		}
 		return peças[linha][coluna];
 	}
 	public piece piece(Position position) {
+		if (!positionExists(position)) {
+			throw new boardException("Posiçao nao e valida");
+		}
 		return peças[position.getLinha()][position.getColuna()];
 	}
 	
 	public void placePiece(piece piece,Position position) {
+		if (ThereIsAPiece(position)) {
+			throw new boardException("Ja tem uma peça nessa posiçao");
+		}
 		peças[position.getLinha()][position.getColuna()] = piece;
 		piece.position = position;
 	}
+	
+	public boolean positionExists(int linha, int coluna) {
+		return linha >= 0 && linha < linhas && coluna >= 0 && coluna < colunas;
+	}
+	public boolean positionExists(Position position) {
+		return positionExists(position.getLinha(),position.getColuna());
+	}
+	
+	public boolean ThereIsAPiece(Position position) {
+		if (!positionExists(position)) {
+			throw new boardException("Posiçao nao e valida");
+		}
+		return piece(position) != null;
+		
+	}
+
 	
 	
 
