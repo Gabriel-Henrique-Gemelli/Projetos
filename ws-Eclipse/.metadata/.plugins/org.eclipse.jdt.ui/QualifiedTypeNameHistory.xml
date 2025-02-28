@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="utils.Currency_value"/>
     <fullyQualifiedTypeName name="Entity.Conta_Bancaria"/>
     <fullyQualifiedTypeName name="exercisios.CurrencyChanger"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Currency"/>
     <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="java.util.Vector"/>
@@ -18,4 +17,5 @@
     <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
