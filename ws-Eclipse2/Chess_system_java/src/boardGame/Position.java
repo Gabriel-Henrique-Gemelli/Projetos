@@ -28,6 +28,11 @@ public class Position {
 			return linha + ", " + coluna;
 			
 		}
+		
+		public void SetValues(int linha, int coluna) {
+			this.linha = linha;
+			this.coluna = coluna;
+		}
 	
 		
 }
