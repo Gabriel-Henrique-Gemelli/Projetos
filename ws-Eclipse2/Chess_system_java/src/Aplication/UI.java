@@ -1,5 +1,6 @@
 package Aplication;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -30,7 +31,21 @@ public class UI {
 	public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 	public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
+	
+	public static void clearScreen() {
+		 try {
+		        if (System.getProperty("os.name").contains("Windows")) {
+		            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+		        } else {
+		            System.out.print("\033[H\033[2J");
+		            System.out.flush();
+		        }
+		    } catch (Exception e) {
+		        System.err.println("Erro ao limpar a tela.");
+		    }
+	}
 	public static ChessPosition readChessPosition(Scanner sc) {
+
 		try {
 			String s = sc.nextLine();
 			char column = s.charAt(0);
