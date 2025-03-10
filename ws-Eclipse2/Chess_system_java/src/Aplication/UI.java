@@ -82,15 +82,22 @@ public class UI {
 		} else {
 			System.out.println("Jogadas: " + chessMatch.getTurn());
 		}
+		if (!chessMatch.getCheckMate()) {
+			if (chessMatch.getcurrentPlayer() == Color.WHITE) {
+				System.out.println("esperando o jogador: BRANCO");
+			} else {
+				System.out.println("esperando o jogador: PRETO");
+			}
+			if (chessMatch.getCheck()) {
+				System.out.println("CHECK!");
+			}
+		}
+		else {
+			System.out.println("CHECKMATE!");
+			System.out.println("Vencedor: " +  chessMatch.getcurrentPlayer());
+		}
 
-		if (chessMatch.getcurrentPlayer() == Color.WHITE) {
-			System.out.println("esperando o jogador: BRANCO");
-		} else {
-			System.out.println("esperando o jogador: PRETO");
-		}
-		if (chessMatch.getCheck()) {
-			System.out.println("CHECK!");
-		}
+		
 	}
 
 	public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) {
@@ -123,7 +130,7 @@ public class UI {
 	private static void printCapturedPieces(List<ChessPiece> captured) {
 		List<ChessPiece> white = captured.stream().filter(x -> x.getColor() == Color.WHITE).collect(Collectors.toList());
 		List<ChessPiece> black = captured.stream().filter(x -> x.getColor() == Color.BLACK).collect(Collectors.toList());
-		System.out.println("Captured pieces: ");
+		System.out.println("Peças capturadas: ");
 		System.out.print("Brancas: ");
 		System.out.print(ANSI_WHITE);
 		System.out.print(Arrays.toString(white.toArray()));
