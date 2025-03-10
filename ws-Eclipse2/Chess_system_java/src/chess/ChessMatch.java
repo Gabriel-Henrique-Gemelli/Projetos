@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import boardGame.Board;
 import boardGame.Position;
 import boardGame.piece;
+import chess.pieces.peao;
 import chess.pieces.rei;
 import chess.pieces.torre;
 
@@ -121,18 +122,20 @@ public class ChessMatch {
 
 	private piece makeMove(Position source, Position target) {
 		ChessPiece p = (ChessPiece)board.removePiece(source);
-		
+		p.increaseMoveCount();
 		piece capturedPiece = board.removePiece(target);
+		board.placePiece(p, target);
 		if (capturedPiece != null) {
 			piecesOnTheBoard.remove(capturedPiece);
 			capturedPieces.add(capturedPiece);
 		}
-		board.placePiece(p, target);
+
 		return capturedPiece;
 	}
 
 	private void undoMove(Position source, Position target, piece captured) {
-		piece p = board.removePiece(target);
+		ChessPiece p = (ChessPiece)board.removePiece(target);
+		p.decreaseMoveCount();
 		board.placePiece(p, source);
 		if (captured != null) {
 			board.placePiece(captured, target);
@@ -206,11 +209,29 @@ public class ChessMatch {
 	}
 
 	private void initialSetup() {
-		placeNewPiece('h', 7, new torre(board, Color.WHITE));
-		placeNewPiece('d', 1, new torre(board, Color.WHITE));
-		placeNewPiece('e', 1, new rei(board, Color.WHITE));
+		placeNewPiece('a', 1, new torre(board, Color.WHITE));
 
-		placeNewPiece('b', 8, new torre(board, Color.BLACK));
-		placeNewPiece('a', 8, new rei(board, Color.BLACK));
+        placeNewPiece('e', 1, new rei(board, Color.WHITE));
+        placeNewPiece('h', 1, new torre(board, Color.WHITE));
+        placeNewPiece('a', 2, new peao(board, Color.WHITE));
+        placeNewPiece('b', 2, new peao(board, Color.WHITE));
+        placeNewPiece('c', 2, new peao(board, Color.WHITE));
+        placeNewPiece('d', 2, new peao(board, Color.WHITE));
+        placeNewPiece('e', 2, new peao(board, Color.WHITE));
+        placeNewPiece('f', 2, new peao(board, Color.WHITE));
+        placeNewPiece('g', 2, new peao(board, Color.WHITE));
+        placeNewPiece('h', 2, new peao(board, Color.WHITE));
+
+        placeNewPiece('a', 8, new torre(board, Color.BLACK));
+        placeNewPiece('e', 8, new rei(board, Color.BLACK));
+        placeNewPiece('h', 8, new torre(board, Color.BLACK));
+        placeNewPiece('a', 7, new peao(board, Color.BLACK));
+        placeNewPiece('b', 7, new peao(board, Color.BLACK));
+        placeNewPiece('c', 7, new peao(board, Color.BLACK));
+        placeNewPiece('d', 7, new peao(board, Color.BLACK));
+        placeNewPiece('e', 7, new peao(board, Color.BLACK));
+        placeNewPiece('f', 7, new peao(board, Color.BLACK));
+        placeNewPiece('g', 7, new peao(board, Color.BLACK));
+        placeNewPiece('h', 7, new peao(board, Color.BLACK));
 	}
 }
