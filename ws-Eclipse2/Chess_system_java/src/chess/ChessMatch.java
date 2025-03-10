@@ -120,7 +120,8 @@ public class ChessMatch {
 	}
 
 	private piece makeMove(Position source, Position target) {
-		piece p = board.removePiece(source);
+		ChessPiece p = (ChessPiece)board.removePiece(source);
+		
 		piece capturedPiece = board.removePiece(target);
 		if (capturedPiece != null) {
 			piecesOnTheBoard.remove(capturedPiece);
