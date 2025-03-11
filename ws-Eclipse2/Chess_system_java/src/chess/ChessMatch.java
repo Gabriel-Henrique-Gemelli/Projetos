@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import boardGame.Board;
 import boardGame.Position;
 import boardGame.piece;
+import chess.pieces.Cavalo;
 import chess.pieces.bispo;
 import chess.pieces.peao;
 import chess.pieces.rei;
@@ -211,7 +212,7 @@ public class ChessMatch {
 
 	private void initialSetup() {
 		placeNewPiece('a', 1, new torre(board, Color.WHITE));
-
+		placeNewPiece('b', 1, new Cavalo(board, Color.WHITE));
         placeNewPiece('e', 1, new rei(board, Color.WHITE));
         placeNewPiece('c', 1, new bispo(board, Color.WHITE));
         placeNewPiece('f', 1, new bispo(board, Color.WHITE));
