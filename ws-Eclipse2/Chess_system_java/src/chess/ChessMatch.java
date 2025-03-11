@@ -8,6 +8,7 @@ import boardGame.Board;
 import boardGame.Position;
 import boardGame.piece;
 import chess.pieces.Cavalo;
+import chess.pieces.Rainha;
 import chess.pieces.bispo;
 import chess.pieces.peao;
 import chess.pieces.rei;
@@ -211,12 +212,14 @@ public class ChessMatch {
 	}
 
 	private void initialSetup() {
-		placeNewPiece('a', 1, new torre(board, Color.WHITE));
-		placeNewPiece('b', 1, new Cavalo(board, Color.WHITE));
-        placeNewPiece('e', 1, new rei(board, Color.WHITE));
-        placeNewPiece('c', 1, new bispo(board, Color.WHITE));
-        placeNewPiece('f', 1, new bispo(board, Color.WHITE));
+        placeNewPiece('a', 1, new torre(board, Color.WHITE));
         placeNewPiece('h', 1, new torre(board, Color.WHITE));
+        placeNewPiece('b', 1, new Cavalo(board, Color.WHITE));
+        placeNewPiece('c', 1, new bispo(board, Color.WHITE));
+        placeNewPiece('d', 1, new Rainha(board, Color.WHITE));
+        placeNewPiece('e', 1, new rei(board, Color.WHITE));
+        placeNewPiece('f', 1, new bispo(board, Color.WHITE));
+        placeNewPiece('g', 1, new Cavalo(board, Color.WHITE));
         placeNewPiece('a', 2, new peao(board, Color.WHITE));
         placeNewPiece('b', 2, new peao(board, Color.WHITE));
         placeNewPiece('c', 2, new peao(board, Color.WHITE));
@@ -227,10 +230,13 @@ public class ChessMatch {
         placeNewPiece('h', 2, new peao(board, Color.WHITE));
 
         placeNewPiece('a', 8, new torre(board, Color.BLACK));
-        placeNewPiece('e', 8, new rei(board, Color.BLACK));
-        placeNewPiece('c', 8, new bispo(board, Color.BLACK));
-        placeNewPiece('f', 8, new bispo(board, Color.BLACK));
         placeNewPiece('h', 8, new torre(board, Color.BLACK));
+        placeNewPiece('b', 8, new Cavalo(board, Color.BLACK));
+        placeNewPiece('c', 8, new bispo(board, Color.BLACK));
+        placeNewPiece('d', 8, new Rainha(board, Color.BLACK));
+        placeNewPiece('e', 8, new rei(board, Color.BLACK));
+        placeNewPiece('f', 8, new bispo(board, Color.BLACK));
+        placeNewPiece('g', 8, new Cavalo(board, Color.BLACK));
         placeNewPiece('a', 7, new peao(board, Color.BLACK));
         placeNewPiece('b', 7, new peao(board, Color.BLACK));
         placeNewPiece('c', 7, new peao(board, Color.BLACK));

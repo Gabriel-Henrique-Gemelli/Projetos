@@ -69,7 +69,9 @@ public class UI {
 			}
 			System.out.println();
 		}
+		System.out.println("   _______________");
 		System.out.print("   A B C D E F G H");
+		
 	}
 
 	public static void printMatch(ChessMatch chessMatch,List<ChessPiece> captured) {

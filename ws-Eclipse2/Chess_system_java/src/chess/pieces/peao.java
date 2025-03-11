@@ -11,6 +11,10 @@ public class peao extends ChessPiece {
 		super(board, color);
 
 	}
+	@Override
+	public String toString() {
+		return "P";
+	}
 
 	@Override
 	public boolean[][] possibleMoves() {
@@ -44,7 +48,7 @@ public class peao extends ChessPiece {
 			}
 
 			p.SetValues(position.getLinha() + 2, position.getColuna());
-			Position p2 = new Position(position.getLinha() - 1, position.getColuna());
+			Position p2 = new Position(position.getLinha() + 1, position.getColuna());
 			if (getBoard().positionExists(p) && !getBoard().ThereIsAPiece(p) && getBoard().positionExists(p2)
 					&& !getBoard().ThereIsAPiece(p2) && getMoveCount() == 0) {
 				mat[p.getLinha()][p.getColuna()] = true;
@@ -65,9 +69,6 @@ public class peao extends ChessPiece {
 
 	}
 
-	@Override
-	public String toString() {
-		return "p";
-	}
+
 	
 }
