@@ -132,6 +132,23 @@ public class ChessMatch {
 			piecesOnTheBoard.remove(capturedPiece);
 			capturedPieces.add(capturedPiece);
 		}
+		
+		// special move castling kingside rook
+		if (p instanceof rei && target.getColuna() == source.getColuna() + 2) {
+			Position sourceT = new Position(source.getLinha(), source.getColuna() + 3);
+			Position TargetT = new Position(source.getLinha(), source.getColuna() + 1);
+			ChessPiece torre = (ChessPiece)board.removePiece(sourceT);
+			board.placePiece(torre, TargetT);
+			torre.increaseMoveCount();
+		}
+		// special move castling queen side rook
+		if (p instanceof rei && target.getColuna() == source.getColuna() - 2) {
+			Position sourceT = new Position(source.getLinha(), source.getColuna() - 4);
+			Position TargetT = new Position(source.getLinha(), source.getColuna() - 1);
+			ChessPiece torre = (ChessPiece)board.removePiece(sourceT);
+			board.placePiece(torre, TargetT);
+			torre.increaseMoveCount();
+		}
 
 		return capturedPiece;
 	}
@@ -144,6 +161,22 @@ public class ChessMatch {
 			board.placePiece(captured, target);
 			capturedPieces.remove(captured);
 			piecesOnTheBoard.add(captured);
+		}
+		// special move castling kingside rook
+		if (p instanceof rei && target.getColuna() == source.getColuna() + 2) {
+			Position sourceT = new Position(source.getLinha(), source.getColuna() + 3);
+			Position TargetT = new Position(source.getLinha(), source.getColuna() + 1);
+			ChessPiece torre = (ChessPiece)board.removePiece(TargetT);
+			board.placePiece(torre, sourceT);
+			torre.decreaseMoveCount();
+		}
+		// special move castling queen side rook
+		if (p instanceof rei && target.getColuna() == source.getColuna() - 2) {
+			Position sourceT = new Position(source.getLinha(), source.getColuna() - 4);
+			Position TargetT = new Position(source.getLinha(), source.getColuna() - 1);
+			ChessPiece torre = (ChessPiece)board.removePiece(TargetT);
+			board.placePiece(torre, sourceT);
+			torre.decreaseMoveCount();
 		}
 	}
 
