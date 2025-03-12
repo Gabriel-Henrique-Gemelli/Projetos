@@ -22,6 +22,7 @@ public class ChessMatch {
 	private boolean check;
 	private boolean checkMate;
 	private ChessPiece EnPassantVulnerable;
+	private ChessPiece promoted;
 
 	private List<piece> piecesOnTheBoard = new ArrayList<piece>();
 	private List<piece> capturedPieces = new ArrayList<piece>();
@@ -54,6 +55,10 @@ public class ChessMatch {
 		return EnPassantVulnerable;
 	}
 
+	public ChessPiece getPromoted() {
+		return promoted;
+	}
+
 	public ChessPiece[][] getPieces() {
 		ChessPiece[][] mat = new ChessPiece[board.getLinha()][board.getColuna()];
 		for (int i = 0; i < board.getLinha(); i++) {
@@ -82,8 +87,16 @@ public class ChessMatch {
 			undoMove(source, target, capturedPiece);
 			throw new ChessException("Voce nao pode se colocar em check");
 		}
-
 		ChessPiece movedPiece = (ChessPiece) board.piece(target);
+		// specialMove promotion
+		promoted = null;
+		if (movedPiece instanceof peao) {
+			if (movedPiece.getColor() == Color.WHITE && target.getLinha() == 0
+					|| movedPiece.getColor() == Color.BLACK && target.getLinha() == 7) {
+				promoted = (ChessPiece) board.piece(target);
+				promoted = replacePromotedPiece("R");
+			}
+		}
 
 		if (testCheck(opponent(currentPlayer))) {
 			check = true;
@@ -105,6 +118,39 @@ public class ChessMatch {
 			EnPassantVulnerable = null;
 		}
 		return (ChessPiece) capturedPiece;
+
+	}
+
+	public ChessPiece replacePromotedPiece(String type) {
+		if (promoted == null) {
+			throw new IllegalStateException("Nao tem peça para ser promovida");
+		}
+		if (!type.equals("B") && !type.equals("C") && !type.equals("R") && !type.equals("T")) {
+			return promoted;
+		}
+		Position pos = promoted.getChessPosition().toPosition();
+		piece p = board.removePiece(pos);
+		piecesOnTheBoard.remove(p);
+
+		ChessPiece newPiece = newPiece(type, promoted.getColor());
+		board.placePiece(newPiece, pos);
+		piecesOnTheBoard.add(newPiece);
+		return newPiece;
+
+	}
+
+	private ChessPiece newPiece(String type, Color color) {
+		if (type.equals("B")) {
+			return new bispo(board, color);
+		}
+		if (type.equals("R")) {
+			return new Rainha(board, color);
+		}
+		if (type.equals("T")) {
+			return new torre(board, color);
+		}
+
+		return new Cavalo(board, color);
 
 	}
 
@@ -293,6 +339,7 @@ public class ChessMatch {
 		placeNewPiece('f', 2, new peao(board, Color.WHITE, this));
 		placeNewPiece('g', 2, new peao(board, Color.WHITE, this));
 		placeNewPiece('h', 2, new peao(board, Color.WHITE, this));
+		placeNewPiece('c', 6, new peao(board, Color.WHITE, this));
 
 		placeNewPiece('a', 8, new torre(board, Color.BLACK));
 		placeNewPiece('h', 8, new torre(board, Color.BLACK));
