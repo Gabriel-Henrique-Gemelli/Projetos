@@ -48,8 +48,8 @@ public class bispo extends ChessPiece {
 		if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
 			mat[p.getLinha()][p.getColuna()] = true;
 		}
-		
-		//sudoeste
+
+		// sudoeste
 
 		p.SetValues(position.getLinha() + 1, position.getColuna() - 1);
 		while (getBoard().positionExists(p) && !getBoard().ThereIsAPiece(p)) {

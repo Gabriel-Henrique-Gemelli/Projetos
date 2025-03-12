@@ -86,7 +86,8 @@ public class rei extends ChessPiece {
 			if (testRookCasting(posicaoTorres1)) {
 				Position p1 = new Position(position.getLinha(), position.getColuna() + 1);
 				Position p2 = new Position(position.getLinha(), position.getColuna() + 2);
-				if (getBoard().piece(p1) == null && getBoard().piece(p2) == null);
+				if (getBoard().piece(p1) == null && getBoard().piece(p2) == null)
+					;
 				mat[position.getLinha()][position.getColuna() + 2] = true;
 			}
 
@@ -98,7 +99,8 @@ public class rei extends ChessPiece {
 				Position p1 = new Position(position.getLinha(), position.getColuna() - 1);
 				Position p2 = new Position(position.getLinha(), position.getColuna() - 2);
 				Position p3 = new Position(position.getLinha(), position.getColuna() - 3);
-				if (getBoard().piece(p1) == null && getBoard().piece(p2) == null && getBoard().piece(p3) == null);
+				if (getBoard().piece(p1) == null && getBoard().piece(p2) == null && getBoard().piece(p3) == null)
+					;
 				mat[position.getLinha()][position.getColuna() - 2] = true;
 			}
 

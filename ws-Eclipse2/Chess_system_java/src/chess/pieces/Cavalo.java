@@ -35,7 +35,6 @@ public class Cavalo extends ChessPiece {
 		if (getBoard().positionExists(p) && canMove(p)) {
 			mat[p.getLinha()][p.getColuna()] = true;
 		}
-		
 
 		p.SetValues(position.getLinha() - 2, position.getColuna() + 1);
 		if (getBoard().positionExists(p) && canMove(p)) {
