@@ -9,6 +9,7 @@ import java.util.Scanner;
 import Interface.ex2.entities.Contract;
 import Interface.ex2.entities.Installment;
 import Interface.ex2.service.ContractService;
+import Interface.ex2.service.PaypallService;
 
 public class Program {
 
@@ -30,7 +31,7 @@ public class Program {
 		System.out.print("Entre com o numero de parcelas: ");
 		int n = sc.nextInt();
 		
-		ContractService service = new ContractService(null);	
+		ContractService service = new ContractService(new PaypallService());	
 		
 		service.processContract(contract, n);
 		
