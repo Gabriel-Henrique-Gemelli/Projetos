@@ -10,6 +10,7 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 
 import db.DB;
+import db.DbException;
 import db.DbIntegrityException;
 
 public class Program {
@@ -18,21 +19,29 @@ public class Program {
 		// Atualizar dados
 		
 		Connection conn = null;
-		PreparedStatement st = null;
+		Statement st = null;
 		try {
 			conn = DB.getConnection();
+			conn.setAutoCommit(false);
 			
-			st = conn.prepareStatement(
-					"DELETE FROM department "
-					+ "WHERE "
-					+ "id = ?");
-			st.setInt(1, 2);
+			st = conn.createStatement();
 			
-			int rowsAffected = st.executeUpdate();
+			int rows1 = st.executeUpdate("UPDATE seller Set BaseSalary = 2090 WHERE DepartmentId = 1");
+			int rows2 = st.executeUpdate("UPDATE seller Set BaseSalary = 3090 WHERE DepartmentId = 2");
 			
-			System.out.println("Donw! Rows affected: " + rowsAffected);
+			
+			
+			
+			System.out.println("rows1 " + rows1);
+			System.out.println("rows2 " + rows2);
+			conn.commit();
 		} catch (SQLException e) {
-			throw new DbIntegrityException(e.getMessage()); 
+			try {
+				conn.rollback();
+				throw new DbException("Transaçao nao foi concluida! Caused By: " + e.getMessage());
+			} catch (SQLException e1) {
+				throw new DbException("Erro tentando voltar Caused By: " + e1.getMessage());
+			} 
 		}
 		finally {
 			DB.closeStatement(st);
