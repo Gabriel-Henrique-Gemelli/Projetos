@@ -10,10 +10,12 @@ import org.springframework.context.annotation.Profile;
 
 import com.gemas.Curso.entities.Category;
 import com.gemas.Curso.entities.Pedido;
+import com.gemas.Curso.entities.Product;
 import com.gemas.Curso.entities.User;
 import com.gemas.Curso.entities.enums.PedidoStatus;
 import com.gemas.Curso.repositories.CategoryRepository;
 import com.gemas.Curso.repositories.PedidoRepository;
+import com.gemas.Curso.repositories.ProductRepository;
 import com.gemas.Curso.repositories.UserRepositorie;
 
 @Configuration
@@ -24,10 +26,13 @@ public class TestConfig implements CommandLineRunner {
 	private UserRepositorie Repository;
 
 	@Autowired
-	private PedidoRepository RepositoryP;
+	private PedidoRepository RepositoryPe;
 	
 	@Autowired
 	private CategoryRepository RepositoryC;
+	
+	@Autowired 
+	private ProductRepository RepositoryP;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -41,9 +46,18 @@ public class TestConfig implements CommandLineRunner {
 		Category cat1 = new Category(null, "Electronics"); 
 		Category cat2 = new Category(null, "Books"); 
 		Category cat3 = new Category(null, "Computers");
+		
+		Product p1 = new Product(null, "The Lord of the Rings", "Lorem ipsum dolor sit amet, consectetur.", 90.5, ""); 
+		Product p2 = new Product(null, "Smart TV", "Nulla eu imperdiet purus. Maecenas ante.", 2190.0, ""); 
+		Product p3 = new Product(null, "Macbook Pro", "Nam eleifend maximus tortor, at mollis.", 1250.0, ""); 
+		Product p4 = new Product(null, "PC Gamer", "Donec aliquet odio ac rhoncus cursus.", 1200.0, ""); 
+		Product p5 = new Product(null, "Rails for Dummies", "Cras fringilla convallis sem vel faucibus.", 100.99, "");
 
 		Repository.saveAll(Arrays.asList(u1, u2));
-		RepositoryP.saveAll(Arrays.asList(o1, o2, o3));
+		RepositoryPe.saveAll(Arrays.asList(o1, o2, o3));
 		RepositoryC.saveAll(Arrays.asList(cat1,cat2,cat3));
+		RepositoryP.saveAll(Arrays.asList(p1,p2,p3,p4,p5));
+		
+		
 	}
 }
