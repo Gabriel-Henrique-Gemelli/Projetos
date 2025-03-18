@@ -16,7 +16,7 @@ import com.gemas.Curso.services.CategoryService;
 import com.gemas.Curso.services.PedidoService;
 
 @RestController
-@RequestMapping(value = "/categorys")
+@RequestMapping(value = "/categories")
 public class CategoryResources {
 	@Autowired
 	private CategoryService service;
