@@ -3,6 +3,7 @@ package com.gemas.Curso.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gemas.Curso.entities.pk.PedidoItemPk;
 
 import jakarta.persistence.EmbeddedId;
@@ -32,7 +33,7 @@ public class OrderItem implements Serializable {
 		this.quantity = quantity;
 		this.price = price;
 	}
-
+	@JsonIgnore
 	public Pedido getPedido() {
 		return id.getPedido();
 	}
@@ -41,6 +42,7 @@ public class OrderItem implements Serializable {
 		id.setPedido(pedido);
 	}
 
+	
 	public Product getProduct() {
 		return id.getProduct();
 	}
