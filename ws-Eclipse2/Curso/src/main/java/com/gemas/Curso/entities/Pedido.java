@@ -5,6 +5,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.gemas.Curso.entities.enums.PedidoStatus;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,10 +23,12 @@ public class Pedido implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'",timezone = "GMT")
+
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
 	private Instant moment;
-	
+
+	private Integer pedidoStatus;
+
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private User Client;
@@ -33,13 +36,25 @@ public class Pedido implements Serializable {
 	public Pedido() {
 		super();
 	}
-
-	public Pedido(Long id, Instant moment, User client) {
+	public Pedido(Long id, Instant moment, PedidoStatus pedidoStatus, User client) {
 		super();
 		this.id = id;
 		this.moment = moment;
+		setPedidoStatus(pedidoStatus);
 		Client = client;
 	}
+
+	public PedidoStatus getPedidoStatus() {
+		return PedidoStatus.valueOf(pedidoStatus);
+	}
+
+	public void setPedidoStatus(PedidoStatus pedidoStatus) {
+		if (pedidoStatus != null) {
+			this.pedidoStatus = pedidoStatus.getCode();
+		}
+	}
+
+	
 
 	public Long getId() {
 		return id;
@@ -81,6 +96,5 @@ public class Pedido implements Serializable {
 		Pedido other = (Pedido) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
+
 }
