@@ -3,6 +3,7 @@ package com.gemas.Curso.entities.pk;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gemas.Curso.entities.Pedido;
 import com.gemas.Curso.entities.Product;
 
@@ -23,6 +24,7 @@ public class PedidoItemPk implements Serializable {
 	@JoinColumn
 	private Product product;
 	
+	@JsonIgnore
 	public Pedido getPedido() {
 		return pedido;
 	}

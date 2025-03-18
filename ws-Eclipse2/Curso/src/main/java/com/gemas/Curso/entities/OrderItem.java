@@ -7,15 +7,16 @@ import com.gemas.Curso.entities.pk.PedidoItemPk;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 @Entity
-@Table(name = "tb-order-item")
+@Table(name = "tb_order_item")
 public class OrderItem implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
+	
 	@EmbeddedId
-	private PedidoItemPk id;
+	private PedidoItemPk id = new PedidoItemPk();
 
 	private Integer quantity;
 	private Double price;

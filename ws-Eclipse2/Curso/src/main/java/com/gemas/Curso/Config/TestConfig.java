@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import com.gemas.Curso.entities.Category;
+import com.gemas.Curso.entities.OrderItem;
 import com.gemas.Curso.entities.Pedido;
 import com.gemas.Curso.entities.Product;
 import com.gemas.Curso.entities.User;
@@ -65,6 +66,11 @@ public class TestConfig implements CommandLineRunner {
 		RepositoryPe.saveAll(Arrays.asList(o1, o2, o3));
 		RepositoryC.saveAll(Arrays.asList(cat1,cat2,cat3));
 		RepositoryP.saveAll(Arrays.asList(p1,p2,p3,p4,p5));
+		
+		OrderItem oi1 = new OrderItem(o1, p1, 2, p1.getPrice()); 
+		OrderItem oi2 = new OrderItem(o1, p3, 1, p3.getPrice()); 
+		OrderItem oi3 = new OrderItem(o2, p3, 2, p3.getPrice()); 
+		OrderItem oi4 = new OrderItem(o3, p5, 2, p5.getPrice()); 
 		
 		
 	}
