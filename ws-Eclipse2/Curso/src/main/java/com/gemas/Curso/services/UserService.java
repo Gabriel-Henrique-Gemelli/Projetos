@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.gemas.Curso.entities.User;
 import com.gemas.Curso.repositories.UserRepositorie;
+import com.gemas.Curso.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class UserService {
@@ -21,7 +22,7 @@ public class UserService {
 	
 	public User findById(Long id) {
 		Optional<User> obj = Repository.findById(id);
-		return obj.get();
+		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 		
 	}
 	
