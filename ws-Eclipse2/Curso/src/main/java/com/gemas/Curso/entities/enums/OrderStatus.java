@@ -1,6 +1,6 @@
 package com.gemas.Curso.entities.enums;
 
-public enum PedidoStatus {
+public enum OrderStatus {
 	PENDENTE(1), 
 	EM_PROCESSAMENTO(2), 
 	ENVIADO(3), 
@@ -9,7 +9,7 @@ public enum PedidoStatus {
 
 	private int code;
 
-	private PedidoStatus(int code) {
+	private OrderStatus(int code) {
 		this.code = code;
 	}
 
@@ -17,8 +17,8 @@ public enum PedidoStatus {
 		return code;
 	}
 	
-	public static PedidoStatus valueOf(int code) {
-		for (PedidoStatus value : PedidoStatus.values()) {
+	public static OrderStatus valueOf(int code) {
+		for (OrderStatus value : OrderStatus.values()) {
 			if (value.getCode() == code) {
 				return value;
 			}

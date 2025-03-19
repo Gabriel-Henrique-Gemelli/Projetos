@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gemas.Curso.entities.Category;
-import com.gemas.Curso.entities.Pedido;
+import com.gemas.Curso.entities.Order;
 import com.gemas.Curso.entities.User;
 import com.gemas.Curso.services.CategoryService;
-import com.gemas.Curso.services.PedidoService;
+import com.gemas.Curso.services.OrderService;
 
 @RestController
 @RequestMapping(value = "/categories")

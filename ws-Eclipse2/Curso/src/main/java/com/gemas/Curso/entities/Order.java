@@ -7,8 +7,10 @@ import java.util.Objects;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gemas.Curso.entities.enums.PedidoStatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.gemas.Curso.entities.enums.OrderStatus;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,11 +18,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_pedido")
-public class Pedido implements Serializable {
+@Table(name = "tb_order")
+public class Order implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
@@ -30,34 +33,37 @@ public class Pedido implements Serializable {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
 	private Instant moment;
 
-	private Integer pedidoStatus;
+	private Integer orderStatus;
 
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private User Client;
 
-	@OneToMany(mappedBy = "id.pedido")
+	@OneToMany(mappedBy = "id.order")
 	private Set<OrderItem> items = new HashSet<OrderItem>();
-	
-	public Pedido() {
+
+	@OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+	private Payment payment;
+
+	public Order() {
 		super();
 	}
 
-	public Pedido(Long id, Instant moment, PedidoStatus pedidoStatus, User client) {
+	public Order(Long id, Instant moment, OrderStatus orderStatus, User client) {
 		super();
 		this.id = id;
 		this.moment = moment;
-		setPedidoStatus(pedidoStatus);
-		Client = client;
+		this.Client = client;
+		setOrderStatus(orderStatus);
 	}
 
-	public PedidoStatus getPedidoStatus() {
-		return PedidoStatus.valueOf(pedidoStatus);
+	public OrderStatus getPedidoStatus() {
+		return OrderStatus.valueOf(orderStatus);
 	}
 
-	public void setPedidoStatus(PedidoStatus pedidoStatus) {
-		if (pedidoStatus != null) {
-			this.pedidoStatus = pedidoStatus.getCode();
+	public void setOrderStatus(OrderStatus orderStatus) {
+		if (orderStatus != null) {
+			this.orderStatus = orderStatus.getCode();
 		}
 	}
 
@@ -84,9 +90,25 @@ public class Pedido implements Serializable {
 	public void setClient(User client) {
 		Client = client;
 	}
-	
-	public Set<OrderItem> getItems(){
+
+	public Set<OrderItem> getItems() {
 		return items;
+	}
+
+	public Payment getPayment() {
+		return payment;
+	}
+
+	public void setPayment(Payment payment) {
+		this.payment = payment;
+	}
+
+	public Double getTotal() {
+		double sum = 0.0;
+		for (OrderItem x : items) {
+			sum += x.getSubTotal();
+		}
+		return sum;
 	}
 
 	@Override
@@ -102,7 +124,7 @@ public class Pedido implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Pedido other = (Pedido) obj;
+		Order other = (Order) obj;
 		return Objects.equals(id, other.id);
 	}
 

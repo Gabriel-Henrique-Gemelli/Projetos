@@ -5,8 +5,6 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import org.hibernate.annotations.ManyToAny;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
@@ -22,7 +20,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "tb_produto")
 public class Product implements Serializable {
-	
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -98,8 +96,8 @@ public class Product implements Serializable {
 	}
 	
 	@JsonIgnore
-	public Set<Pedido> getPedidos(){
-		Set<Pedido> set = new HashSet<Pedido>();
+	public Set<Order> getPedidos(){
+		Set<Order> set = new HashSet<Order>();
 		for (OrderItem x : items) {
 			set.add(x.getPedido());
 		}

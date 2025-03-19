@@ -6,22 +6,22 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gemas.Curso.entities.Pedido;
-import com.gemas.Curso.repositories.PedidoRepository;
+import com.gemas.Curso.entities.Order;
+import com.gemas.Curso.repositories.OrderRepository;
 import com.gemas.Curso.repositories.UserRepositorie;
 
 @Service
-public class PedidoService {
+public class OrderService {
 
 	@Autowired
-	private PedidoRepository Repository;
+	private OrderRepository Repository;
 	
-	public List<Pedido> findAll(){
+	public List<Order> findAll(){
 		return Repository.findAll();
 	}
 	
-	public Pedido findById(Long id) {
-		Optional<Pedido> obj = Repository.findById(id);
+	public Order findById(Long id) {
+		Optional<Order> obj = Repository.findById(id);
 		return obj.get();
 		
 	}

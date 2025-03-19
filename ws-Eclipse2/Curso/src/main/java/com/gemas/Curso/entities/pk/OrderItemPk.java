@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.gemas.Curso.entities.Pedido;
+import com.gemas.Curso.entities.Order;
 import com.gemas.Curso.entities.Product;
 
 import jakarta.persistence.Embeddable;
@@ -12,24 +12,24 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Embeddable
-public class PedidoItemPk implements Serializable {
+public class OrderItemPk implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
 	@ManyToOne
 	@JoinColumn(name = "order_id")
-	private Pedido pedido;
+	private Order order;
 	
 	@ManyToOne
 	@JoinColumn
 	private Product product;
 	
 	@JsonIgnore
-	public Pedido getPedido() {
-		return pedido;
+	public Order getPedido() {
+		return order;
 	}
-	public void setPedido(Pedido pedido) {
-		this.pedido = pedido;
+	public void setPedido(Order order) {
+		this.order = order;
 	}
 	public Product getProduct() {
 		return product;
@@ -39,7 +39,7 @@ public class PedidoItemPk implements Serializable {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(pedido, product);
+		return Objects.hash(order, product);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -49,8 +49,8 @@ public class PedidoItemPk implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		PedidoItemPk other = (PedidoItemPk) obj;
-		return Objects.equals(pedido, other.pedido) && Objects.equals(product, other.product);
+		OrderItemPk other = (OrderItemPk) obj;
+		return Objects.equals(order, other.order) && Objects.equals(product, other.product);
 	}
 
 	

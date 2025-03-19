@@ -4,11 +4,10 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.gemas.Curso.entities.pk.PedidoItemPk;
+import com.gemas.Curso.entities.pk.OrderItemPk;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 @Entity
 @Table(name = "tb_order_item")
@@ -17,7 +16,7 @@ public class OrderItem implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@EmbeddedId
-	private PedidoItemPk id = new PedidoItemPk();
+	private OrderItemPk id = new OrderItemPk();
 
 	private Integer quantity;
 	private Double price;
@@ -26,20 +25,20 @@ public class OrderItem implements Serializable {
 		super();
 	}
 
-	public OrderItem(Pedido pedido, Product product, Integer quantity, Double price) {
+	public OrderItem(Order order, Product product, Integer quantity, Double price) {
 		super();
-		id.setPedido(pedido);
+		id.setPedido(order);
 		id.setProduct(product);
 		this.quantity = quantity;
 		this.price = price;
 	}
 	@JsonIgnore
-	public Pedido getPedido() {
+	public Order getPedido() {
 		return id.getPedido();
 	}
 
-	public void setPedido(Pedido pedido) {
-		id.setPedido(pedido);
+	public void setPedido(Order order) {
+		id.setPedido(order);
 	}
 
 	
@@ -50,7 +49,7 @@ public class OrderItem implements Serializable {
 	public void setProduct(Product product) {
 		id.setProduct(product);
 	}
-
+	
 	public Integer getQuantity() {
 		return quantity;
 	}
@@ -65,6 +64,10 @@ public class OrderItem implements Serializable {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	
+	public Double getSubTotal() {
+		return price * quantity;
 	}
 
 	@Override
