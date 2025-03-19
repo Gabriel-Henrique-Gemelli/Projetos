@@ -13,6 +13,8 @@ import com.gemas.Curso.repositories.UserRepositorie;
 import com.gemas.Curso.services.exceptions.DataBaseException;
 import com.gemas.Curso.services.exceptions.ResourceNotFoundException;
 
+import jakarta.persistence.EntityNotFoundException;
+
 @Service
 public class UserService {
 
@@ -46,9 +48,14 @@ public class UserService {
 	}
 	
 	public User update(Long id,User obj) {
-		User entity = Repository.getReferenceById(id);
-		updateData(entity,obj);
-		return Repository.save(entity);
+		try {
+			User entity = Repository.getReferenceById(id);
+			updateData(entity,obj);
+			return Repository.save(entity);	
+		} catch (EntityNotFoundException e) {
+			e.printStackTrace();
+			throw new ResourceNotFoundException(id);
+		}
 	}
 	
 	private void updateData(User entity,User obj) {
