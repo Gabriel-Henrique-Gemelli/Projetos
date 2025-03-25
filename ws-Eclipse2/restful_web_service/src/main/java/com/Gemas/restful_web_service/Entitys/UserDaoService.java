@@ -7,6 +7,8 @@ import java.util.function.Predicate;
 
 import org.springframework.stereotype.Component;
 
+import com.Gemas.restful_web_service.Exceptions.UserNotFoundException;
+
 @Component
 public class UserDaoService {
 
@@ -32,8 +34,13 @@ public class UserDaoService {
 	}
 	public User findOne(int id) {
 		Predicate<? super User> predicate = user -> user.getId().equals(id);
-		return users.stream().filter(predicate).findFirst().orElseThrow(() -> new IndexOutOfBoundsException("Nao foi possivel achar o Usuario com id: " + id));
+		return users.stream().filter(predicate).findFirst().orElseThrow(() -> new UserNotFoundException("Nao foi possivel achar o Usuario com id: " + id));
 
+	}
+	
+	public void deleteById(int id) {
+		Predicate<? super User> predicate = user -> user.getId().equals(id);
+		users.removeIf(predicate);
 	}
 
 }

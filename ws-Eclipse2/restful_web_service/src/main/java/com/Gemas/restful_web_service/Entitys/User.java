@@ -5,13 +5,19 @@ import java.util.Objects;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class User {
 
 	@Id
 	private Integer id;
+	
+	@Size(min = 2, message = "Nome deve ter mais do que pelo menos 2 caracteres")
 	private String name;
+	
+	@Past(message = "Datas devem ser no passado")
 	private LocalDate birthDate;
 
 	public User() {
