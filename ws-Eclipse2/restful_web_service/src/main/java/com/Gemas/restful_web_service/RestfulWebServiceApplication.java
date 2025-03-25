@@ -8,7 +8,7 @@ public class RestfulWebServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RestfulWebServiceApplication.class, args);
-		System.out.println("Lanche criado com sucesso");
+		System.out.println("Lanche criaod com sucesso");
 	}
 
 }
