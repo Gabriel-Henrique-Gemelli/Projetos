@@ -1040,3 +1040,138 @@ org.eclipse.core.runtime.CoreException: Launch configuration Program (20) refere
 	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:106)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 2025-03-28 13:05:05,091 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-31 14:59:08,840 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-03-31 15:01:58,060 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Mockito.demo:0.0.1-SNAPSHOT @ C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\pom.xml.
+2025-03-31 15:01:59,011 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Mockito.demo/src/main/java
+2025-03-31 15:01:59,016 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Mockito.demo/src/main/resources
+2025-03-31 15:01:59,027 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Mockito.demo/src/main/resources
+2025-03-31 15:01:59,030 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Mockito.demo/src/test/java
+2025-03-31 15:01:59,031 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Mockito.demo/src/test/resources
+2025-03-31 15:01:59,895 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 2 sec
+2025-03-31 15:02:04,244 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:02:04,316 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:02:04,328 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:04:18,441 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:04:18,452 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:04:18,459 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:06:01,058 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:06:01,060 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:06:01,062 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:07:08,965 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:07:08,968 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:07:08,970 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:07:12,286 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:07:12,290 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:07:12,293 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:07:15,447 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:07:15,451 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:07:15,454 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:11:15,126 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:11:15,127 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:11:15,129 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:11:41,008 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:11:41,012 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:11:41,017 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:12:12,517 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:12:12,521 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:12:12,523 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:12:47,918 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:12:47,919 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:12:47,921 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:15:10,818 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:15:10,839 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:15:10,846 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:15:12,404 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:15:12,405 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:15:12,407 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:16:53,216 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:16:53,217 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:16:53,219 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:16:55,053 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:16:55,053 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:16:55,055 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:17:20,606 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:17:20,608 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:17:20,610 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:17:21,634 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:17:21,634 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:17:21,636 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:17:51,261 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:17:51,264 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:17:51,267 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:18:08,319 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:18:08,321 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:18:08,323 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:18:10,237 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:18:10,242 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:18:10,245 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:18:13,639 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:18:13,640 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:18:13,641 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:18:51,351 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:18:51,352 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:18:51,353 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:19:45,222 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:19:45,223 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:19:45,224 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:20:04,744 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating SomeBussinesImplTest from maven configuration
+2025-03-31 15:20:38,382 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:20:38,383 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:20:38,384 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:22:02,690 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:22:02,690 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:22:02,691 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:36:09,923 [ModalContext] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating SomeBussinesImplStubTest from maven configuration
+2025-03-31 15:36:10,190 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-31 15:36:10,212 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:36:10,218 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:36:22,566 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:36:22,566 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:36:22,568 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:36:37,625 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:36:37,625 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:36:37,627 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:37:21,844 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:37:21,844 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:37:21,846 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:37:42,776 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:37:42,776 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:37:42,777 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:38:22,795 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:38:22,795 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:38:22,797 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:38:49,213 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:38:49,214 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:38:49,216 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:39:00,110 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating SomeBussinesImplMockTest from maven configuration
+2025-03-31 15:41:05,038 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:41:05,039 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:41:05,041 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:43:59,974 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:43:59,975 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:43:59,976 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:44:03,958 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:44:03,958 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:44:03,959 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:46:31,533 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:46:31,534 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:46:31,535 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:46:59,211 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:46:59,211 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:46:59,212 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:47:33,696 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:47:33,697 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:47:33,699 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:47:59,421 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:47:59,421 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:47:59,423 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:48:04,021 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:48:04,022 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:48:04,023 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-03-31 15:48:59,183 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:48:59,206 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-31 15:48:59,210 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
+2025-04-01 12:41:16,121 [Worker-10: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-04-01 12:42:37,872 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-04-01 12:42:37,899 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-04-01 12:42:37,907 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gabif\OneDrive\Documentos\GitHub\Projetos\ws-Eclipse\Mockito.demo\src\test\resources
