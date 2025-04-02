@@ -1,15 +1,14 @@
-package com.example.Mockito.demo;
+package com.example.learn_jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class LearnJpaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(LearnJpaApplication.class, args);
 		System.out.println("Lanche criado com sucesso");
-		
 	}
 
 }
