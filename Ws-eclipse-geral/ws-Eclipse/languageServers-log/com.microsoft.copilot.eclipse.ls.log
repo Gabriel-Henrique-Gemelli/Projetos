@@ -1,0 +1,105 @@
+
+[2025-04-22T16:16:41.265647700-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 2404
+
+
+[2025-04-22T16:16:41.268160500-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"1","method":"initialize","params":{"processId":2332,"rootUri":null,"initializationOptions":{"editorInfo":{"name":"Eclipse","version":"4.35.0.v20250228-0140"},"editorPluginInfo":{"name":"copilot-eclipse","version":"0.5.0.202503240230"},"capabilities":{"fetch":false,"watchedFiles":false}},"capabilities":{"workspace":{"applyEdit":true,"workspaceEdit":{"documentChanges":true,"resourceOperations":["create","delete","rename"],"failureHandling":"undo","changeAnnotationSupport":{"groupsOnLabel":true}},"symbol":{"dynamicRegistration":true},"executeCommand":{"dynamicRegistration":true},"workspaceFolders":true,"configuration":true,"codeLens":{"refreshSupport":true}},"textDocument":{"synchronization":{"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"completionItem":{"snippetSupport":true,"documentationFormat":["markdown","plaintext"],"resolveSupport":{"properties":["documentation","detail","additionalTextEdits"]},"insertTextModeSupport":{"valueSet":[1,2]}},"contextSupport":true,"completionList":{"itemDefaults":["commitCharacters","editRange","insertTextFormat","insertTextMode"]}},"hover":{"contentFormat":["markdown","plaintext"]},"signatureHelp":{},"references":{},"documentHighlight":{},"documentSymbol":{"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"hierarchicalDocumentSymbolSupport":true},"formatting":{"dynamicRegistration":true},"rangeFormatting":{},"definition":{"linkSupport":true},"typeDefinition":{"linkSupport":true},"codeAction":{"codeActionLiteralSupport":{"codeActionKind":{"valueSet":["quickfix","refactor","refactor.extract","refactor.inline","refactor.rewrite","source","source.organizeImports"]}},"dataSupport":true,"resolveSupport":{"properties":["edit"]},"dynamicRegistration":true},"codeLens":{},"documentLink":{},"colorProvider":{},"rename":{"prepareSupport":true},"publishDiagnostics":{},"foldingRange":{"lineFoldingOnly":true,"foldingRangeKind":{"valueSet":["comment","imports","region"]},"foldingRange":{"collapsedText":false}},"selectionRange":{},"inlayHint":{}},"window":{"workDoneProgress":true,"showMessage":{},"showDocument":{"support":true}}},"clientInfo":{"name":"Eclipse IDE","version":"0.18.17.202502012025"},"trace":"off","workspaceFolders":[{"uri":"file:///C:/Users/gabif/Documents/GitHub/Projetos/ws-Eclipse2/ControleSuaDiabetes/","name":"ControleSuaDiabetes"}]}}
+[2025-04-22T16:16:42.243569300-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"1","result":{"capabilities":{"textDocumentSync":{"openClose":true,"change":2},"notebookDocumentSync":{"notebookSelector":[{"notebook":"*"}]},"workspace":{"workspaceFolders":{"supported":true,"changeNotifications":true}},"executeCommandProvider":{"commands":["github.copilot.finishDeviceFlow","github.copilot.didAcceptCompletionItem","github.copilot.didAcceptNextEditSuggestionItem","github.copilot.didAcceptPanelCompletionItem"]},"inlineCompletionProvider":{}},"serverInfo":{"name":"GitHub Copilot Language Server","version":"1.290.0","nodeVersion":"20.18.2"}}}
+[2025-04-22T16:16:42.371114200-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 52
+
+
+[2025-04-22T16:16:42.371114200-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"initialized","params":{}}
+[2025-04-22T16:16:42.373622800-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 105
+
+
+[2025-04-22T16:16:42.373622800-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"2","method":"checkStatus","params":{"localChecksOnly":false,"forceRefresh":false}}
+[2025-04-22T16:16:42.378137200-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 229
+
+
+[2025-04-22T16:16:42.379133800-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"workspace/didChangeWorkspaceFolders","params":{"event":{"added":[{"uri":"file:///C:/Users/gabif/Documents/GitHub/Projetos/ws-Eclipse2/ControleSuaDiabetes/","name":"ControleSuaDiabetes"}],"removed":[]}}}
+[2025-04-22T16:16:42.561875500-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"window/logMessage","params":{"type":3,"message":"[certificates] Removed 7 expired certificates"}}
+[2025-04-22T16:16:42.566143200-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"window/logMessage","params":{"type":3,"message":"[lsp] GitHub Copilot Language Server 1.290.0 initialized"}}
+[2025-04-22T16:16:42.567145300-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":0,"method":"workspace/configuration","params":{"items":[{"section":"github.copilot"},{"section":"github-enterprise"},{"section":"http"},{"section":"telemetry"}]}}
+[2025-04-22T16:16:42.571146800-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 55
+
+
+[2025-04-22T16:16:42.571146800-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":0,"result":[null,null,null,null]}
+[2025-04-22T16:16:43.838799500-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 240
+
+
+[2025-04-22T16:16:43.838799500-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"workspace/didChangeConfiguration","params":{"settings":{"showEditorCompletions":true,"enableAutoCompletions":true,"github-enterprise":{"uri":""},"http":{"proxyStrictSSL":true,"proxyKerberosServicePrincipal":""}}}}
+[2025-04-22T16:16:43.875021800-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 2575
+
+
+[2025-04-22T16:16:43.876123500-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{"textDocument":{"uri":"file:///C:/Users/gabif/Documents/GitHub/Projetos/ws-Eclipse2/ControleSuaDiabetes/src/main/java/com/fabris/ControleSuaDiabetes/entity/User.java","languageId":"java","version":1,"text":"package com.fabris.ControleSuaDiabetes.entity;\r\n\r\nimport java.io.Serializable;\r\nimport java.util.Objects;\r\nimport java.util.UUID;\r\n\r\nimport jakarta.persistence.Entity;\r\nimport jakarta.persistence.GeneratedValue;\r\nimport jakarta.persistence.GenerationType;\r\nimport jakarta.persistence.Id;\r\nimport jakarta.persistence.Table;\r\nimport jakarta.validation.constraints.NotEmpty;\r\nimport org.hibernate.validator.constraints.br.CPF;\r\n\r\n@Entity\r\n@Table(name \u003d \"user_Table\")\r\npublic class User implements Serializable {\r\n\tprivate static final long serialVersionUID \u003d 1L;\r\n\t@Id\r\n\t@GeneratedValue(strategy \u003d GenerationType.UUID)\r\n\tprivate UUID id;\r\n\r\n\t@NotEmpty(message \u003d \"Nome não pode ser vazio\")\r\n\r\n\tprivate String nome;\r\n\r\n\t@NotEmpty(message \u003d \"Email não pode ser vazio\")\r\n\tprivate String email;\r\n\r\n\t@CPF(message \u003d \"CPF inválido\")\r\n\t@NotEmpty(message \u003d \"CPF não pode ser vazio\")\r\n\tprivate String CPF;\r\n\r\n\tpublic User() {\r\n\t\tsuper();\r\n\t}\r\n\r\n\tpublic User(String nome, String email, String CPF) {\r\n\t\tsuper();\r\n\t\tthis.nome \u003d nome;\r\n\t\tthis.email \u003d email;\r\n\t\tthis.CPF \u003d CPF;\r\n\t}\r\n\r\n\tpublic String getNome() {\r\n\t\treturn nome;\r\n\t}\r\n\r\n\tpublic void setNome(String nome) {\r\n\t\tthis.nome \u003d nome;\r\n\t}\r\n\r\n\tpublic String getEmail() {\r\n\t\treturn email;\r\n\t}\r\n\r\n\tpublic void setEmail(String email) {\r\n\t\tthis.email \u003d email;\r\n\t}\r\n\r\n\tpublic String getCPF() {\r\n\t\treturn CPF;\r\n\t}\r\n\r\n\tpublic void setCPF(String cPF) {\r\n\t\tCPF \u003d cPF;\r\n\t}\r\n\r\n\tpublic UUID getId() {\r\n\t\treturn id;\r\n\t}\r\n\r\n\t@Override\r\n\tpublic int hashCode() {\r\n\t\treturn Objects.hash(id);\r\n\t}\r\n\r\n\t@Override\r\n\tpublic boolean equals(Object obj) {\r\n\t\tif (this \u003d\u003d obj)\r\n\t\t\treturn true;\r\n\t\tif (obj \u003d\u003d null)\r\n\t\t\treturn false;\r\n\t\tif (getClass() !\u003d obj.getClass())\r\n\t\t\treturn false;\r\n\t\tUser other \u003d (User) obj;\r\n\t\treturn Objects.equals(id, other.id);\r\n\t}\r\n\r\n\t@Override\r\n\tpublic String toString() {\r\n\t\treturn \"User [id\u003d\" + id + \", nome\u003d\" + nome + \", email\u003d\" + email + \"]\";\r\n\t}\r\n\r\n}\r\n"}}}
+[2025-04-22T16:16:44.200746600-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"statusNotification","params":{"busy":false,"kind":"Normal","status":"Normal","message":""}}
+[2025-04-22T16:16:44.201755600-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"didChangeStatus","params":{"busy":false,"kind":"Normal"}}
+[2025-04-22T16:16:44.202745700-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"2","result":{"status":"OK","user":"Gabriel-Henrique-Gemelli"}}
+[2025-04-22T16:16:44.204257800-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 72
+
+
+[2025-04-22T16:16:44.205259300-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"3","method":"conversation/templates","params":{}}
+[2025-04-22T16:16:44.205259300-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 64
+
+
+[2025-04-22T16:16:44.205259300-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"4","method":"copilot/models","params":{}}
+[2025-04-22T16:16:44.214695-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"conversation/preconditionsNotification","params":{"results":[{"type":"token","status":"failed"},{"type":"chat_enabled","status":"ok"}],"status":"failed"}}
+[2025-04-22T16:16:44.214695-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"3","result":[{"id":"tests","description":"Generate unit tests","shortDescription":"Generate Tests","scopes":["chat-panel","editor"]},{"id":"simplify","description":"Simplify the code","shortDescription":"Simplify This","scopes":["editor","chat-panel","inline"]},{"id":"fix","description":"Fix problems and compile errors","shortDescription":"Fix This","scopes":["editor","chat-panel","inline"]},{"id":"explain","description":"Explain how the code works","shortDescription":"Explain This","scopes":["editor","chat-panel","inline"]},{"id":"doc","description":"Document the current selection of code","shortDescription":"Generate Docs","scopes":["editor","chat-panel","inline"]},{"id":"feedback","description":"Steps to provide feedback","shortDescription":"Feedback","scopes":["chat-panel"]},{"id":"help","description":"Get help on how to use Copilot chat","shortDescription":"Help","scopes":["chat-panel"]}]}
+[2025-04-22T16:16:44.739444100-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"featureFlagsNotification","params":{"rt":true,"sn":false,"chat":true,"ic":true,"pc":false,"jcp":false,"ce":false}}
+[2025-04-22T16:16:44.929085900-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"4","result":[{"modelFamily":"gpt-4o","modelName":"GPT-4o","scopes":["chat-panel","edit-panel","inline"],"id":"gpt-4o","preview":false},{"modelFamily":"o3-mini","modelName":"o3-mini","scopes":["chat-panel","edit-panel","inline"],"id":"o3-mini","preview":false},{"modelFamily":"claude-3.5-sonnet","modelName":"Claude 3.5 Sonnet","modelPolicy":{"state":"unconfigured","terms":"Enable access to the latest Claude 3.5 Sonnet model from Anthropic. [Learn more about how GitHub Copilot serves Claude 3.5 Sonnet](https://docs.github.com/copilot/using-github-copilot/using-claude-sonnet-in-github-copilot)."},"scopes":["chat-panel","edit-panel","inline"],"id":"claude-3.5-sonnet","preview":false},{"modelFamily":"gemini-2.0-flash","modelName":"Gemini 2.0 Flash","modelPolicy":{"state":"unconfigured","terms":"Enable access to the latest Gemini models from Google. [Learn more about how GitHub Copilot serves Gemini 2.0 Flash](https://docs.github.com/en/copilot/using-github-copilot/ai-models/using-gemini-flash-in-github-copilot)."},"scopes":["chat-panel","edit-panel","inline"],"id":"gemini-2.0-flash-001","preview":false},{"modelFamily":"gpt-4o-mini","modelName":"GPT-4o Copilot","scopes":["completion"],"id":"gpt-4o-copilot","preview":false}]}
+[2025-04-22T16:16:44.934596-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 74
+
+
+[2025-04-22T16:16:44.934596-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"5","method":"conversation/persistence","params":{}}
+[2025-04-22T16:16:44.936585600-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"5","result":{"path":"C:\\Users\\gabif\\AppData\\Local\\github-copilot"}}
+[2025-04-22T16:19:02.991126600-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 229
+
+
+[2025-04-22T16:19:02.991126600-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"textDocument/didClose","params":{"textDocument":{"uri":"file:///C:/Users/gabif/Documents/GitHub/Projetos/ws-Eclipse2/ControleSuaDiabetes/src/main/java/com/fabris/ControleSuaDiabetes/entity/User.java"}}}
+[2025-04-22T16:19:03.610281200-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 60
+
+
+[2025-04-22T16:19:03.611286800-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"6","method":"shutdown","params":null}
+[2025-04-22T16:19:03.831865600-03:00] LANGUAGE_SERVER_TO_LSP4E com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","id":"6","result":null}
+[2025-04-22T16:19:03.834460200-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+Content-Length: 47
+
+
+[2025-04-22T16:19:03.835028800-03:00] LSP4E_TO_LANGUAGE_SERVER com.microsoft.copilot.eclipse.ls:
+{"jsonrpc":"2.0","method":"exit","params":null}
