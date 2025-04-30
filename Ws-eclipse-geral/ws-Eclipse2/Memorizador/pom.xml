@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="https://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.3</version>
+		<version>3.4.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.Gemas</groupId>
-	<artifactId>Memorizador</artifactId>
+	<artifactId>
+	Memorizador</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Memorizador</name>
-	<description>Memorizador para nerds</description>
+	<description>Memorizador
+	para nerds</description>
 	<url />
 	<licenses>
 		<license />
@@ -28,6 +30,8 @@
 		<url />
 	</scm>
 	<properties>
+		<configuration-encoding46>UTF-8</configuration-encoding46>
+		<configuration-encoding>UTF-8</configuration-encoding>
 		<java.version>21</java.version>
 	</properties>
 	<dependencies>
@@ -60,8 +64,7 @@
 		</dependency>
 
 	</dependencies>
-
-	<build>
+<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -69,5 +72,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-</project>
+	> </project>
