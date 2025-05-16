@@ -1,0 +1,40 @@
+
+services:
+  mysql:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 
+      MYSQL_DATABASE: financeiro
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  Java-api:
+    build: ./Java_api
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/financeiro
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 
+    networks:
+      - backend
+
+  python-api:
+    build: ./Python_api
+    depends_on:
+      - mysql
+    ports:
+      - "8000:8000"
+    networks:
+      - backend
+
+volumes:
+  mysql_data:
+
+networks:
+  backend:
