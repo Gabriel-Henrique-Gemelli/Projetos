@@ -17,6 +17,8 @@
       <div class="lang-actions">
         <a class="chip" href="#" data-set-lang="pt">PT</a>
         <a class="chip" href="#" data-set-lang="en">EN</a>
+        <!-- Botão Baixar CV no topo -->
+        <a class="chip solid" href="curriculo.pdf" download data-i18n="chip_cv">Baixar CV</a>
       </div>
     </nav>
   </header>
@@ -34,6 +36,8 @@
           <a class="chip" href="#" onclick="exibirAlerta()" data-i18n="chip_copy">Copiar e-mail</a>
           <a class="chip" href="https://wa.me/5554984284023" target="_blank" rel="noopener" data-i18n="chip_whatsapp">WhatsApp</a>
           <a class="chip" href="https://github.com/gabriel-henrique-gemelli" target="_blank" rel="noopener" data-i18n="chip_github">GitHub</a>
+          <!-- Botão Baixar CV também na área de contato -->
+          <a class="chip solid" href="curriculo.pdf" download data-i18n="chip_cv">Baixar CV</a>
         </div>
       </div>
     </section>
@@ -115,9 +119,16 @@
         </div>
       </section>
 
+      <!-- NOVO: Certificados -->
+      <section id="Certificados" class="card span-2">
+        <h2 data-i18n="certs_title">Certificados</h2>
+        <ul id="cert-list" class="list"></ul>
+        <p id="cert-empty" class="muted" data-i18n="certs_empty">Nenhum certificado adicionado ainda.</p>
+      </section>
+
       <section id="Projetos" class="card span-2">
         <h2 data-i18n="projects_title">Projetos em destaque</h2>
-        <div class="projects" data-i18n="projects_list_pt">
+        <div class="projects" id="projects" data-i18n="projects_list_pt">
           <a class="project" href="https://github.com/gabriel-henrique-gemelli" target="_blank" rel="noopener">
             <h3>ERP360 IA (RAG)</h3>
             <p>FastAPI + PostgreSQL com TF-IDF e embeddings, cache e endpoints de QA.</p>
