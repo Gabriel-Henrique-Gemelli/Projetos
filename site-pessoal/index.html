@@ -1,120 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="Reset.css"> -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="assets/mais bonito.jfif">
-    <title>Portfólio</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="doc_title">Portfólio • Gabriel Henrique Gemelli</title>
+  <link rel="icon" type="image/x-icon" href="assets/mais bonito.jfif">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="Script.js" defer></script>
 </head>
-
 <body>
-    <script src="Script.js"></script>
-    <header>
-    <div class="foto">
-        <img src="assets/Foto.jpeg" alt="Foto">
-        <div class="contact-info">
-            <h1>Gabriel Henrique Gemelli</h1>
-            <address>
-                End: Guilherme Manteze 348<br>
-                Tel: (54) 98428-4023<br>
-                Email: <a href="#" onclick="exibirAlerta()">gabrielhenriquegemelli@gmail.com</a><br>
-                Repositorio: <a href="https://github.com/ximbas2508?tab=repositories" target="_blank">Meu portifolio</a> <br>
-                <a href="index.html">Portugues</a> <br>
-                <a href="index_en.html">Ingles</a>
-            </address>
-        </div>
-    </div>   
-    </header>
-
-    <div class="grid-container">
-
-        <section id="SobreMim" data-translate="SobreMim">
-            <h2>Sobre mim</h2>
-            <ul>
-                <li>Sou um jovem com grande interesse na área da computação,
-                    dedicando-me especialmente à programação e ao desenvolvimento de raciocínio lógico.
-                    Atualmente, estou matriculado na faculdade <strong>ATITUS</strong> e permaneço determinado a alcançar meu objetivo de me tornar um desenvolvedor full-stack.
-                    Iniciei minha jornada de aprendizado virtualmente,
-                    e agora, na instituição de ensino, continuo a perseguir ativamente minha meta.</li>
-            </ul>
-        </section>
-
-        <section id="objetivo">
-            <h2>Objetivo</h2>
-            <ul>
-                <li>Pretendo me tornar um excelente desenvolvedor <strong>full-stack</strong>, de forma que seja extremamente respeitado na área.</li>
-
-                <li>Terminar a faculdade conquistando uma das melhores médias da turma.</li>
-                
-                <li>Auxiliar em projetos que possam ajudar pessoas do mundo inteiro.</li>
-            </ul>
-        </section>
-
-        <section id="experiencia">
-            <h2>Experiência Profissional</h2>
-            <ul>
-                <li>
-                    <ul>
-                        <li><strong>Empresa Inotek</strong> - Desenvolvedor Full-Stack em Guaporé | Desde 26/05/23</li>
-
-                        <li><strong>Desenvolvimento de Aplicações Web</strong>: Trabalho com o desenvolvimento de aplicações web, fazendo uso do framework Angular.</li>
-                        
-                        <li><strong>Projeto Atual</strong>: No momento, estou fazendo parte de uma equipe que está focada na criação de um aplicativo, onde minha contribuição se concentra em torná-lo mais amigável para utilização em dispositivos Android.</li>
-                        
-                        <li><strong>Futuras Responsabilidades</strong>: Em um futuro próximo, também assumirei responsabilidades na manutenção do produto principal da empresa</li>    
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section id="Idioma">
-            <h2>Idioma</h2>
-            <ul>
-                <li>Portugues - Nativo.</li>
-                <li>Ingles - Fluente.</li>
-            </ul>
-        </section>
-
-        <section id="Educaçao">
-            <ul>
-            <h2>Educação</h2>
-            <ul>
-                <li><strong>Escola Conceição</strong> - Ensino Fundamental.</li>
-                <li><strong>Escola Scalabrini</strong> - Ensino Médio.</li>
-                <li><strong>ATITUS Educação</strong> - Ciência da Computação</li>
-            <ul>
-        </section>
-        
-        <section>
-            <h2>Tecnologias</h2>
-            <ul>
-                <li><strong>Trabalho</strong></li>
-                <li>Angular</li>
-                <li><strong>Primeiro Semestre</strong></li>
-                <li>Python</li>
-                <li>Github</li>
-                <li><strong>Segundo Semestre</strong></li>
-                <li>Java</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-        </section>
-    </div>
-
-    <div id="alerta" class="alerta-customizado">
-        <h3>Alerta!</h3>
-        <p>Email copiado com sucesso!</p>
-        <button onclick="fecharAlerta()">OK</button>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="#">Gabriel Henrique Gemelli</a>
+      <div class="lang-actions">
+        <a class="chip" href="#" data-set-lang="pt">PT</a>
+        <a class="chip" href="#" data-set-lang="en">EN</a>
       </div>
+    </nav>
+  </header>
 
-      <div id="overlay" class="overlay"></div>
+  <main>
+    <section class="container hero">
+      <div class="hero-photo">
+        <img src="assets/Foto.jpeg" alt="Foto de Gabriel Henrique Gemelli">
+      </div>
+      <div class="hero-info">
+        <h1>Gabriel Henrique Gemelli</h1>
+        <p class="subtitle" data-i18n="subtitle_pt">Desenvolvedor em formação • Back-end</p>
+        <p class="location" data-i18n="location_pt">Passo Fundo, RS • Português/English</p>
+        <div class="contacts">
+          <a class="chip" href="#" onclick="exibirAlerta()" data-i18n="chip_copy">Copiar e-mail</a>
+          <a class="chip" href="https://wa.me/5554984284023" target="_blank" rel="noopener" data-i18n="chip_whatsapp">WhatsApp</a>
+          <a class="chip" href="https://github.com/gabriel-henrique-gemelli" target="_blank" rel="noopener" data-i18n="chip_github">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container grid">
+      <section id="SobreMim" class="card">
+        <h2 data-i18n="about_title">Sobre mim</h2>
+        <p data-i18n="about_body_pt">Sou apaixonado por computação, focado em programação e raciocínio lógico. Curso Ciência da Computação na <strong>ATITUS</strong> e sigo determinado a me tornar um desenvolvedor back-end. Comecei estudando online e hoje avanço com projetos práticos na faculdade e fora dela.</p>
+      </section>
+
+      <section id="objetivo" class="card">
+        <h2 data-i18n="goal_title">Objetivo</h2>
+        <ul class="list" data-i18n="goal_list_pt">
+          <li>Tornar-me um desenvolvedor <strong>back-end</strong> sólido, entregando APIs escaláveis e bem testadas.</li>
+          <li>Concluir a graduação com alta performance acadêmica.</li>
+          <li>Contribuir em projetos que ajudem pessoas em escala.</li>
+        </ul>
+      </section>
+
+      <section id="experiencia" class="card">
+        <h2 data-i18n="xp_title">Experiência Profissional</h2>
+
+        <div class="xp-item">
+          <div class="xp-header">
+            <span class="xp-role" data-i18n="xp_compass_role"><strong>Estagiário de Desenvolvimento Back-end (AWS)</strong> • Compass UOL</span>
+          </div>
+          <ul class="list" data-i18n="xp_compass_list_pt">
+            <li>Atuação no desenvolvimento de serviços back-end utilizando AWS.</li>
+            <li>Implementação de endpoints e rotinas server-side com foco em qualidade e boas práticas.</li>
+            <li>Colaboração em revisão de código e rotinas de versionamento com Git/GitHub.</li>
+          </ul>
+        </div>
+
+        <div class="xp-item">
+          <div class="xp-header">
+            <span class="xp-role" data-i18n="xp_inotek_role"><strong>Desenvolvedor Full-Stack</strong> • Inotek</span>
+            <span class="xp-date" data-i18n="xp_inotek_date">mai/2023 — atual</span>
+          </div>
+          <ul class="list" data-i18n="xp_inotek_list_pt">
+            <li>Desenvolvimento de aplicações web com Angular.</li>
+            <li>Foco em melhorar a experiência em dispositivos Android.</li>
+            <li>Apoio à manutenção do produto principal.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="Idioma" class="card">
+        <h2 data-i18n="langs_title">Idiomas</h2>
+        <ul class="list" data-i18n="langs_list_pt">
+          <li>Português — Nativo</li>
+          <li>Inglês — Fluente</li>
+        </ul>
+      </section>
+
+      <section id="Educacao" class="card">
+        <h2 data-i18n="edu_title">Educação</h2>
+        <ul class="list" data-i18n="edu_list_pt">
+          <li><strong>ATITUS Educação</strong> — Ciência da Computação</li>
+          <li><strong>Escola Scalabrini</strong> — Ensino Médio</li>
+          <li><strong>Escola Conceição</strong> — Ensino Fundamental</li>
+        </ul>
+      </section>
+
+      <section id="Tecnologias" class="card">
+        <h2 data-i18n="tech_title">Tecnologias</h2>
+        <div class="badges">
+          <span class="badge">Java</span>
+          <span class="badge">Spring Boot</span>
+          <span class="badge">Python</span>
+          <span class="badge">FastAPI</span>
+          <span class="badge">AWS</span>
+          <span class="badge">Angular</span>
+          <span class="badge">React</span>
+          <span class="badge">PostgreSQL</span>
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Git/GitHub</span>
+        </div>
+      </section>
+
+      <section id="Projetos" class="card span-2">
+        <h2 data-i18n="projects_title">Projetos em destaque</h2>
+        <div class="projects" data-i18n="projects_list_pt">
+          <a class="project" href="https://github.com/gabriel-henrique-gemelli" target="_blank" rel="noopener">
+            <h3>ERP360 IA (RAG)</h3>
+            <p>FastAPI + PostgreSQL com TF-IDF e embeddings, cache e endpoints de QA.</p>
+            <span class="stack">Python • FastAPI • NLP • RAG</span>
+          </a>
+          <a class="project" href="https://github.com/gabriel-henrique-gemelli" target="_blank" rel="noopener">
+            <h3>E-commerce de Insulina</h3>
+            <p>Spring Boot com cálculo VIP de dose e conversão cambial via PTAX.</p>
+            <span class="stack">Java • Spring Boot</span>
+          </a>
+          <a class="project" href="https://github.com/gabriel-henrique-gemelli" target="_blank" rel="noopener">
+            <h3>Website ICARUS</h3>
+            <p>Landing page institucional com estética preto/vermelho.</p>
+            <span class="stack">React • Tailwind</span>
+          </a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Gabriel Henrique Gemelli</div>
+      <div class="footer-links">
+        <a href="#" onclick="exibirAlerta()" data-i18n="footer_email">E-mail</a>
+        <a href="https://github.com/gabriel-henrique-gemelli" target="_blank" rel="noopener" data-i18n="footer_github">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="alerta" class="alerta-customizado" role="dialog" aria-modal="true" aria-labelledby="alerta-title">
+    <h3 id="alerta-title" data-i18n="alert_title">Pronto!</h3>
+    <p data-i18n="alert_msg">E-mail copiado com sucesso.</p>
+    <button onclick="fecharAlerta()" data-i18n="alert_ok">OK</button>
+  </div>
+  <div id="overlay" class="overlay" onclick="fecharAlerta()"></div>
 </body>
-
-
-
 </html>
